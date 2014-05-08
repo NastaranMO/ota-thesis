@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs"
+    Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="../styles/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/portal/mainStyle.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/portal/menu.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/portal/controls.css" rel="stylesheet" type="text/css" />
+    <link href="YahooGridView.css" rel="stylesheet" type="text/css" />
+    <script src="../jscript/pdate.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div id="bottomHeaderDiv">
+        <div class="rightHeader">
+            <span><span>امروز </span>
+                <asp:Label ID="pdate1" runat="server" Text="امروز "></asp:Label></span>
+            <script type="text/javascript">
+                AMIB.showPDate('pdate1');
+            </script>
+        </div>
+        <div class="leftHeader">
+            <div id="innerLeft">
+                <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick">
+                </asp:Timer>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <asp:Label ID="lblTime" runat="server" Text="Label"></asp:Label>
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="Timer1" />
+                    </Triggers>
+                </asp:UpdatePanel>
+            </div>
+            <div id="innerRight">
+            </div>
+        </div>
+    </div>
+    <div id="headerDiv">
+        <span style="float: left; margin-top: 69px; margin-left: 5px;">
+            <asp:ImageButton ID="ImageButton1" ImageUrl="../images/btn/exit.png" ToolTip="خروج"
+                AlternateText="خروج" runat="server" onclick="ImageButton1_Click" /></span>
+    </div>
+    <div id="outerDiv">
+        <div id="menuDiv">
+            <ul>
+                <li><a href="">اطلاعات پایه</a>
+                    <ul>
+                        <li><a href="onvan-kar.aspx">عناوین کاری</a> </li>
+                        <li><a href="Departments.aspx">دپارتمان ها</a></li>
+                        <li><a href="code-amaliat.aspx">کدهای عملیاتی</a></li>
+                        <li><a href="code-gheyre-amaliat.aspx">کدهای غیرعملیاتی</a></li>
+                    </ul>
+                </li>
+                <li><a href="">اطلاعات کارمندان</a>
+                    <ul>
+                        <li><a href="AddPersonal.aspx">افزودن کارمند جدید</a></li>
+                        <li><a href="SearchPersonals.aspx">لیست کارمندان</a></li>
+                        <li><a href="SearchPersonals.aspx">جستجو</a></li>
+                    </ul>
+                </li>
+                <li><a href="">تنظیمات</a>
+                    <ul>
+                        <li><a href="tanzimat-deps-jobs.aspx">دپارتمان و عناوین کاری</a></li>
+                        <li><a href="direct-dep-job.aspx">تخصیص کدهای عملیاتی</a></li>
+                        <li><a href="info-vacations.aspx">مرخصی</a></li>
+                    </ul>
+                </li>
+                <li><a href="">تقویم کاری</a>
+                    <ul>
+                        <li><a href="roozhaye-sal.aspx">روزهای سال</a></li>
+                        <li><a href="vaziat-rooz.aspx">وضعیت روز</a></li>
+                        <li><a href="info-vacations.aspx">سال جدید</a></li>
+                    </ul>
+                </li>
+                <li><a href="DirectReport.aspx">گزارشات</a>
+                                                    <ul>
+                        <li><a href="DirectReport.aspx">مشروح عملکرد</a></li>
+                        <li><a href="IndirectTotalReport.aspx">مشروح ورود و خروج</a></li>
+                                     
+                        <li><a href="remainVacsReport.aspx">مرخصی</a></li>
+                        <li><a href="AnalyzIndirect.aspx">تحلیل عملکرد</a></li>
+        
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="subOuterDiv">
+            <div id="contentDiv">
+                <div id="contentRight">
+                    <div id="contents">
+                        <div class="headerContentRight">
+                            <asp:ContentPlaceHolder ID="cPHcontentHeader" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                        <div id="bottomContent">
+                            <asp:ContentPlaceHolder ID="cPHBottomContent" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                    <div id="profile">
+                        <div id="profileRight">
+                        </div>
+                        <div id="profileLeft">
+                         <div style="text-align:center;">
+                            <span style="color:green; font-weight:bold;"><span>مدیریت سیستم :&nbsp; </span> <span>
+                                <asp:Label ID="lblFullName" runat="server" Text=" "></asp:Label>
+                            </span></span></div>
+                            <hr />
+                             <div style="text-align:center;">
+                    <span style="font-weight:bold;"><span>        وضعیت روز :</span> <span>&nbsp</span> <span>
+                                <asp:Label ID="lblvaziatrooz" runat="server" Text="وضعیت روز"></asp:Label>
+                            </span></span></div>
+                            <hr />
+                            <div style="text-align:center;">
+                            <span style="color:red;font-weight:bold;">تعداد افراد در دپارتمان ها</span><br />
+            <span>
+                                <asp:Label ID="lblDeps" runat="server" Text=""></asp:Label>
+                            </span></div>
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+                <div id="contentLeft">
+                    <div id="contentL">
+                        <div id="headerContentL">
+                            <asp:ContentPlaceHolder ID="cPHheaderContentL" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                        <div id="contentss">
+                            <div class="rahnama">
+                                <div id="leftRahnama">
+                                    <asp:ContentPlaceHolder ID="cPHlnkRahnama" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                                <div id="rightRahnama">
+                                    <asp:Image ID="imgGuide" ImageUrl="~/images/btn/bulb.png" runat="server" />
+                                </div>
+                            </div>
+                            <br />
+                            <fieldset>
+                                <legend>&nbsp
+                                    <asp:ContentPlaceHolder ID="cPHLegendName" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                    &nbsp</legend>
+                                <asp:ContentPlaceHolder ID="cPHTableOrGrid" runat="server">
+                                </asp:ContentPlaceHolder>
+                                <div class="validationDiv">
+                                    <asp:ContentPlaceHolder ID="cPHvalidationDiv" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="clear: both;">
+        </div>
+    </div>
+    <div id="End">
+    </div>
+    <div id="footerDiv">
+        .Copyright © 2012,<a href="mailto:nastaran_moghadasi@yahoo.com"> Nastaran Moghadasi</a>.
+        All Rights Reserved
+    </div>
+    </form>
+</body>
+</html>

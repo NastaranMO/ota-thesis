@@ -1,0 +1,237 @@
+﻿body
+{
+    font-family: Tahoma,Arial,Sans-Serif;
+    font-size: 11px;
+    direction: rtl;
+    background: #ECECEC;
+}
+#outerDiv
+{
+    margin: 0px auto;
+    height: auto;
+    width: 920px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: White;
+}
+#headerDiv
+{
+    width: 100%;
+    background: green;
+    height:110px;
+    background-image: url("../images/ph.png");
+}
+#headerRight
+{
+    width: 160px;
+    background: yellow;
+    padding-right: 40px;
+    height: inherit;
+    float: right;
+}
+#headerLeft
+{
+    width: 720px;
+    height: inherit;
+    background: Gray;
+    text-align: center;
+    float: left;
+}
+#centerDiv
+{
+    width: 920px;
+    height: 283px;
+    background-color: #B4B4B4;
+    margin-top: 0px;
+}
+#jQueryDiv
+{
+    width: 918px;
+padding-right:1px;
+padding-left:1px;
+    background-color: #B4B4B4;
+    height: 280px;
+    float: left;
+
+}
+#centerRightDiv
+{
+    float: right;
+    margin: 10px 0px 10px 0px;
+    width: 200px;
+    background-color: #ECECEC;
+    height: 280px;
+}
+#innerCenterRightDiv
+{
+    margin: 10px;
+    background-color: White;
+    width: 180px;
+    height: 260px;
+}
+/* divDiv */
+#bottomDiv
+{
+    width: 100%;
+    margin-top: 20px;
+    height: 270px;
+}
+div#bottomDiv div#Right
+{
+    float: right;
+    width: 306px;
+    background-image: url("../images/bg-box.jpg");
+    background-color: White;
+    height: 250px;
+}
+.titr
+{
+    font-size: 11px;
+    font-weight: bold;
+    color: #293C77;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.content
+{
+    margin: 15px 20px 10px 20px;
+    height: auto;
+    text-align: justify;
+    line-height: 17px;
+}
+div.content div.left
+{
+    float: left;
+    width: 107px;
+    height: 121px;
+    margin-right: 7px;
+}
+
+#innereLeft
+{
+    width: 608px;
+    float: left;
+    height: inherit;
+}
+div#innereLeft div#rightInnerLeft
+{
+    float: right;
+    width: 306px;
+    background-image: url("../images/bg-box.jpg");
+    background-color: White;
+    height: 250px;
+}
+div#innereLeft div#leftInnerLeft
+{
+    float: left;
+    width: 295px;
+    background-image: url("../images/divDiv.jpg");
+    background-color: White;
+    height: 250px;
+}
+#contentDiv
+{
+    width: 910px;
+    padding: 10px 10px 10px 0px;
+    height: 300px;
+    background-color: White;
+    line-height: 15px;
+    height: 180px;
+}
+div#contentDiv div#login
+{
+    height: 115px;
+    width: 273px;
+    float: right;
+    background-image: url("../images/login-box.gif");
+    margin-top: 30px;
+}
+div#contentDiv div#login div#loginLeft
+{
+    float: right;
+    width: 150px;
+    height: 50px;
+    margin-top: 34px;
+    text-align: right;
+    margin-right: 25px;
+
+}
+div#contentDiv div#login div#loginRight
+{
+    width: 80px;
+    float: left;
+    height: 59px;
+
+  margin-left:5px;
+  text-align:right;
+    margin-top: 25px;
+   
+}
+div#contentDiv div#login div#loginBottom
+{
+    font-size:9px;
+    height:18px;
+    padding-top:4px;
+   line-height:18px;
+   color:Red;
+   font-weight:bold;
+    width:240px;
+
+    display:inline-block;
+    text-align:right;
+}
+.textBox
+{
+    width: 140px;
+    height: 15px;
+    margin-bottom: 4px;
+    font-size: 11px;
+}
+#footerDiv
+{
+    text-align: center;
+    color: #968888;
+    line-height: 15px;
+}
+#footerDiv a
+{
+    color: #968888;
+    text-decoration: none;
+}
+#footerDiv a:hover
+{
+    text-decoration: underline;
+    color: Black;
+}
+hr
+{
+    margin-top: 10px;
+    width: 920px;
+    border: 1px dotted black;
+}
+.waterMark
+{
+    color: Gray;
+    font-size: 11px;
+    width: 140px;
+    height: 15px;
+    margin-bottom: 4px;
+    font-size: 11px;
+}
+
+
+/*-------------- slideshow ---------------------- */
+.slideTitle
+{
+	font-weight:bold;
+	font-size:small;
+	font-style:italic;
+}
+
+.slideDescription
+{
+	font-size:small;
+	font-weight:bold;
+}
+/*------------------- end ---------------------- */

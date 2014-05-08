@@ -1,0 +1,95 @@
+﻿/*Menu Styles*/
+div#menuDiv
+{
+    width: 800px;
+    height: 50px;
+    background: white url(../../images/portal/menuLight.gif);
+    background-position: center;
+    position: relative;
+    display: inline-block;
+    z-index: 1005;
+}
+div#menuDiv > ul
+{
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    z-index: 1005;
+}
+div#menuDiv > ul > li
+{
+    float: right;
+    height: 50px;
+    display: block;
+    margin: 0px 0px 0px 1px;
+    position: relative;
+    color: White;
+    z-index: 1005;
+}
+div#menuDiv > ul > li > a:link, div#menuDiv > ul > li > a:visited
+{
+    font: bold 13px tahoma;
+    z-index: 1005;
+    color:#f0f3f4;
+    text-decoration: none;
+    padding: 0px 15px 0px 15px;
+    display: block;
+    line-height: 48px;
+}
+div#menuDiv > ul > li > a:hover, div#menuDiv > ul > li > a:active
+{
+    -moz-border-radius:20px;
+    background-color: #1048FB;
+    color: #f0f3f4;
+    text-decoration: none;
+    z-index: 1005;
+    height: 50px;
+}
+div#menuDiv > ul > li > ul
+{
+    z-index: 1005;
+    direction: rtl;
+    width: 170px;
+    background: #676666;
+    display: none;
+    position: absolute;
+    top: 49px;
+    right: 0px;
+    list-style-type: none;
+    line-height: 29px;
+    color: White;
+}
+div#menuDiv > ul > li > ul li
+{
+    font: normal 11px tahoma;
+    border-bottom: 1px solid #333333;
+    height: 30px;
+    width: 100%;
+    margin: 0 0px 0px; /* padding-right: 15px;     padding-top: 3px;     padding-bottom: 3px;*/
+    z-index: 1007;
+    color: White;
+}
+div#menuDiv > ul > li > ul li a:link, div#menuDiv > ul > li > ul li a:visited
+{
+    font: normal 12px tahoma;
+    color: White;
+    text-decoration: none;
+    padding: 0px;
+    display: block;
+    z-index: 1007;
+    line-height: 26px;
+    text-align:center;
+}
+div#menuDiv > ul > li > ul li a:hover, div#menuDiv > ul > li > ul li a:active
+{
+    
+    background: #424142;
+    width: 170px;
+    height: 30px;
+    color: White;
+    line-height: 26px;
+}
+div#menuDiv > ul > li:hover > ul
+{
+    display: block;
+}

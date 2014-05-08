@@ -1,0 +1,170 @@
+﻿.img
+{
+      vertical-align:middle;
+}
+
+.lblPerId
+{
+    border:1px solid red;
+   -moz-border-radius:30px;
+}
+
+
+.divError
+{
+    background-color:#fa9898;padding:7px 0px 7px 0px;
+
+    -moz-border-radius:7px;
+    text-align:center;
+}
+
+.font
+{
+    font-family:B Nazanin;
+    font-size:14px;
+}
+
+.validator
+{
+    color: Red;
+}
+
+.errorClass
+{
+    margin-bottom: 10px;
+    margin-top: 10px;
+        font-size: 11px;
+    font-weight:normal;
+    font-family:Tahoma;
+}
+.itemStyleNumber
+{
+    font-family: B Nazanin;
+    font-size: 14px;
+}
+.ddlAmal
+{
+    border: 1px solid #CEE2ED;
+    width: 233px;
+    height: 20px;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: Tahoma;
+}
+
+.btn
+{
+    font-size: 13px;
+    color: White;
+    font-family: Arial;
+    font-weight: normal;
+    cursor: pointer;
+    background-color: #4AB5CC;
+    border: 5px solid #4AB5CC;
+    -moz-border-radius: 5px;
+    height: 27px;
+}
+.btn:Hover
+{
+    font-size: 13px;
+    background-color: #245FAB;
+    border: 5px solid #2A60A8;
+    -moz-border-radius: 5px;
+}
+.btnDisabled
+{
+    font-size: 12px;
+    color: #808080;
+    font-family: Arial;
+    font-weight: normal;
+    background-color: #d8dadb;
+    border: 1px solid #808080;
+    -moz-border-radius: 5px;
+    cursor: pointer;
+        height: 23px;
+}
+
+.txtNormal
+{
+    height: 17px;
+    width: 130px;
+    font-size: 11px;
+    border: 1px solid #CEE2ED;
+    font-weight: normal;
+    font-family: Tahoma;
+}
+.ddlNumber
+{
+    border: 1px solid #CEE2ED;
+    width: 50px;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: Tahoma;
+}
+.txtLarge
+{
+    height: 17px;
+    width: 322px;
+    border: 1px solid #CEE2ED;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: Tahoma;
+    text-align: right;
+}
+.txtNote
+{
+    min-height: 70px;
+    max-height: 100px;
+    min-width: 322px;
+    font-size: 11px;
+    border: 1px solid #CEE2ED;
+    font-weight: normal;
+    font-family: Tahoma;
+    display: block;
+    max-width: 400px;
+}
+.timeTxt
+{
+    border: 1px solid #CEE2ED;
+    width: 20px;
+    height: 17px;
+    font-size: 14px;
+    font-weight:bold;
+    font-family:B Nazanin;
+    font-weight: normal;
+}
+.dayDdl
+{
+    border: 1px solid #CEE2ED;
+    width: 90px;
+    height: 20px;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: Tahoma;
+}
+.txtZFullTime
+{
+    border: 1px solid #CEE2ED;
+    width: 87px;
+    height: 17px;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: Tahoma;
+}
+.txtFullTime
+{
+    border: 1px solid #CEE2ED;
+    width: 65px;
+    height: 17px;
+    font-size: 11px;
+    font-weight: normal;
+    font-family:tahoma;
+}
+.errorImg
+{
+    background-image: url("../../images/btn/error.png");
+    background-color: Red;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: Tahoma;
+}

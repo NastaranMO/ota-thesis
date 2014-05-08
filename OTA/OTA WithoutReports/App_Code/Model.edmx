@@ -1,0 +1,3007 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OTA_DBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="OTA_DBModelStoreContainer">
+          <EntitySet Name="AccessLevel" EntityType="OTA_DBModel.Store.AccessLevel" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Admins" EntityType="OTA_DBModel.Store.Admins" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CodeState" EntityType="OTA_DBModel.Store.CodeState" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DaysOfYear" EntityType="OTA_DBModel.Store.DaysOfYear" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DayState" EntityType="OTA_DBModel.Store.DayState" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DcDepJob" EntityType="OTA_DBModel.Store.DcDepJob" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Departman_Job" EntityType="OTA_DBModel.Store.Departman_Job" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Departmans" EntityType="OTA_DBModel.Store.Departmans" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DirectCodes" EntityType="OTA_DBModel.Store.DirectCodes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Education" EntityType="OTA_DBModel.Store.Education" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="InDirectCodes" EntityType="OTA_DBModel.Store.InDirectCodes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="InDirectCodesType" EntityType="OTA_DBModel.Store.InDirectCodesType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Jobs" EntityType="OTA_DBModel.Store.Jobs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Personals" EntityType="OTA_DBModel.Store.Personals" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Personals_DirectCode" EntityType="OTA_DBModel.Store.Personals_DirectCode" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Personals_InDirectCode" EntityType="OTA_DBModel.Store.Personals_InDirectCode" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Personals_Vacations" EntityType="OTA_DBModel.Store.Personals_Vacations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RemainVacations" EntityType="OTA_DBModel.Store.RemainVacations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="OTA_DBModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Vac_Info" EntityType="OTA_DBModel.Store.Vac_Info" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Year" EntityType="OTA_DBModel.Store.Year" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Per_Dep_Job" EntityType="OTA_DBModel.Store.Per_Dep_Job" store:Type="Views" store:Schema="dbo" store:Name="Per_Dep_Job">
+            <DefiningQuery>SELECT 
+      [Per_Dep_Job].[PersonalID] AS [PersonalID], 
+      [Per_Dep_Job].[FirstName] AS [FirstName], 
+      [Per_Dep_Job].[LastName] AS [LastName], 
+      [Per_Dep_Job].[DepId] AS [DepId], 
+      [Per_Dep_Job].[JobId] AS [JobId], 
+      [Per_Dep_Job].[AId] AS [AId], 
+      [Per_Dep_Job].[Password] AS [Password], 
+      [Per_Dep_Job].[ShSh] AS [ShSh], 
+      [Per_Dep_Job].[BirthDay] AS [BirthDay], 
+      [Per_Dep_Job].[EduId] AS [EduId], 
+      [Per_Dep_Job].[Mobile] AS [Mobile], 
+      [Per_Dep_Job].[StartContract] AS [StartContract], 
+      [Per_Dep_Job].[EndContract] AS [EndContract], 
+      [Per_Dep_Job].[Tel] AS [Tel], 
+      [Per_Dep_Job].[Address] AS [Address], 
+      [Per_Dep_Job].[PersonalsNote] AS [PersonalsNote], 
+      [Per_Dep_Job].[LastVisited] AS [LastVisited], 
+      [Per_Dep_Job].[DepName] AS [DepName], 
+      [Per_Dep_Job].[EduName] AS [EduName], 
+      [Per_Dep_Job].[JobName] AS [JobName], 
+      [Per_Dep_Job].[AName] AS [AName]
+      FROM [dbo].[Per_Dep_Job] AS [Per_Dep_Job]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="rpt_PersonalList" EntityType="OTA_DBModel.Store.rpt_PersonalList" store:Type="Views" store:Schema="dbo" store:Name="rpt_PersonalList">
+            <DefiningQuery>SELECT 
+      [rpt_PersonalList].[PersonalID] AS [PersonalID], 
+      [rpt_PersonalList].[FirstName] AS [FirstName], 
+      [rpt_PersonalList].[LastName] AS [LastName], 
+      [rpt_PersonalList].[EduId] AS [EduId], 
+      [rpt_PersonalList].[DepId] AS [DepId], 
+      [rpt_PersonalList].[JobId] AS [JobId], 
+      [rpt_PersonalList].[AId] AS [AId], 
+      [rpt_PersonalList].[Password] AS [Password], 
+      [rpt_PersonalList].[ShSh] AS [ShSh], 
+      [rpt_PersonalList].[Tavalod] AS [Tavalod], 
+      [rpt_PersonalList].[Mobile] AS [Mobile], 
+      [rpt_PersonalList].[StartCont] AS [StartCont], 
+      [rpt_PersonalList].[EndCont] AS [EndCont], 
+      [rpt_PersonalList].[Tel] AS [Tel], 
+      [rpt_PersonalList].[Address] AS [Address], 
+      [rpt_PersonalList].[PersonalsNote] AS [PersonalsNote], 
+      [rpt_PersonalList].[LastVisit] AS [LastVisit], 
+      [rpt_PersonalList].[DepName] AS [DepName], 
+      [rpt_PersonalList].[EduName] AS [EduName], 
+      [rpt_PersonalList].[JobName] AS [JobName], 
+      [rpt_PersonalList].[AName] AS [AName]
+      FROM [dbo].[rpt_PersonalList] AS [rpt_PersonalList]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="rptDirect" EntityType="OTA_DBModel.Store.rptDirect" store:Type="Views" store:Schema="dbo" store:Name="rptDirect">
+            <DefiningQuery>SELECT 
+      [rptDirect].[charStartTime] AS [charStartTime], 
+      [rptDirect].[charEndTime] AS [charEndTime], 
+      [rptDirect].[Tarikh] AS [Tarikh], 
+      [rptDirect].[Rooz] AS [Rooz], 
+      [rptDirect].[DcName] AS [DcName], 
+      [rptDirect].[DsName] AS [DsName], 
+      [rptDirect].[DepName] AS [DepName], 
+      [rptDirect].[FirstName] AS [FirstName], 
+      [rptDirect].[LastName] AS [LastName], 
+      [rptDirect].[ShSh] AS [ShSh], 
+      [rptDirect].[BirthDay] AS [BirthDay], 
+      [rptDirect].[Mobile] AS [Mobile], 
+      [rptDirect].[StartContract] AS [StartContract], 
+      [rptDirect].[EndContract] AS [EndContract], 
+      [rptDirect].[YearName] AS [YearName], 
+      [rptDirect].[EduName] AS [EduName], 
+      [rptDirect].[JobName] AS [JobName], 
+      [rptDirect].[PersonalID] AS [PersonalID], 
+      [rptDirect].[DscName] AS [DscName], 
+      [rptDirect].[WorkTimeDateTime] AS [WorkTimeDateTime], 
+      [rptDirect].[WorkHourTime] AS [WorkHourTime], 
+      [rptDirect].[WorkMinTime] AS [WorkMinTime], 
+      [rptDirect].[StartTime] AS [StartTime], 
+      [rptDirect].[EndTime] AS [EndTime]
+      FROM [dbo].[rptDirect] AS [rptDirect]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="rptInDirect" EntityType="OTA_DBModel.Store.rptInDirect" store:Type="Views" store:Schema="dbo" store:Name="rptInDirect">
+            <DefiningQuery>SELECT 
+      [rptInDirect].[DepName] AS [DepName], 
+      [rptInDirect].[DscName] AS [DscName], 
+      [rptInDirect].[Tarikh] AS [Tarikh], 
+      [rptInDirect].[Rooz] AS [Rooz], 
+      [rptInDirect].[DsName] AS [DsName], 
+      [rptInDirect].[IdcTypeName] AS [IdcTypeName], 
+      [rptInDirect].[IdcName] AS [IdcName], 
+      [rptInDirect].[EduName] AS [EduName], 
+      [rptInDirect].[JobName] AS [JobName], 
+      [rptInDirect].[StartTime] AS [StartTime], 
+      [rptInDirect].[EndTime] AS [EndTime], 
+      [rptInDirect].[RemainVac] AS [RemainVac], 
+      [rptInDirect].[YearName] AS [YearName], 
+      [rptInDirect].[FirstName] AS [FirstName], 
+      [rptInDirect].[LastName] AS [LastName], 
+      [rptInDirect].[PersonalID] AS [PersonalID], 
+      [rptInDirect].[ShSh] AS [ShSh], 
+      [rptInDirect].[BirthDay] AS [BirthDay], 
+      [rptInDirect].[Mobile] AS [Mobile], 
+      [rptInDirect].[StartContract] AS [StartContract], 
+      [rptInDirect].[EndContract] AS [EndContract], 
+      [rptInDirect].[MaxTransfer] AS [MaxTransfer], 
+      [rptInDirect].[MaxInYear] AS [MaxInYear]
+      FROM [dbo].[rptInDirect] AS [rptInDirect]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="rptInDirects" EntityType="OTA_DBModel.Store.rptInDirects" store:Type="Views" store:Schema="dbo" store:Name="rptInDirects">
+            <DefiningQuery>SELECT 
+      [rptInDirects].[PersonalID] AS [PersonalID], 
+      [rptInDirects].[FirstName] AS [FirstName], 
+      [rptInDirects].[LastName] AS [LastName], 
+      [rptInDirects].[charStartTime] AS [charStartTime], 
+      [rptInDirects].[charEndTime] AS [charEndTime], 
+      [rptInDirects].[EndTime] AS [EndTime], 
+      [rptInDirects].[StartTime] AS [StartTime], 
+      [rptInDirects].[IdcTypeName] AS [IdcTypeName], 
+      [rptInDirects].[IdcName] AS [IdcName], 
+      [rptInDirects].[DscName] AS [DscName], 
+      [rptInDirects].[Rooz] AS [Rooz], 
+      [rptInDirects].[Tarikh] AS [Tarikh], 
+      [rptInDirects].[DepName] AS [DepName], 
+      [rptInDirects].[JobName] AS [JobName], 
+      [rptInDirects].[EduName] AS [EduName], 
+      [rptInDirects].[ShSh] AS [ShSh], 
+      [rptInDirects].[BirthDay] AS [BirthDay], 
+      [rptInDirects].[Mobile] AS [Mobile], 
+      [rptInDirects].[StartContract] AS [StartContract], 
+      [rptInDirects].[EndContract] AS [EndContract], 
+      [rptInDirects].[ActHourTime] AS [ActHourTime], 
+      [rptInDirects].[ActMinTime] AS [ActMinTime]
+      FROM [dbo].[rptInDirects] AS [rptInDirects]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="rptVacation" EntityType="OTA_DBModel.Store.rptVacation" store:Type="Views" store:Schema="dbo" store:Name="rptVacation">
+            <DefiningQuery>SELECT 
+      [rptVacation].[StartTime] AS [StartTime], 
+      [rptVacation].[EndTime] AS [EndTime], 
+      [rptVacation].[IdcTypeName] AS [IdcTypeName], 
+      [rptVacation].[IdcName] AS [IdcName], 
+      [rptVacation].[PersonalID] AS [PersonalID], 
+      [rptVacation].[FirstName] AS [FirstName], 
+      [rptVacation].[LastName] AS [LastName], 
+      [rptVacation].[Rooz] AS [Rooz], 
+      [rptVacation].[Tarikh] AS [Tarikh], 
+      [rptVacation].[DscName] AS [DscName], 
+      [rptVacation].[DsName] AS [DsName], 
+      [rptVacation].[DepName] AS [DepName], 
+      [rptVacation].[JobName] AS [JobName], 
+      [rptVacation].[EduName] AS [EduName], 
+      [rptVacation].[RemainVac] AS [RemainVac], 
+      [rptVacation].[MaxInYear] AS [MaxInYear], 
+      [rptVacation].[Period] AS [Period], 
+      [rptVacation].[MaxInPeriod] AS [MaxInPeriod], 
+      [rptVacation].[MaxTransfer] AS [MaxTransfer], 
+      [rptVacation].[charStartTime] AS [charStartTime], 
+      [rptVacation].[charEndTime] AS [charEndTime], 
+      [rptVacation].[WorkTimeDateTime] AS [WorkTimeDateTime], 
+      [rptVacation].[WorkHourTime] AS [WorkHourTime], 
+      [rptVacation].[WorkMinTime] AS [WorkMinTime]
+      FROM [dbo].[rptVacation] AS [rptVacation]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_1" EntityType="OTA_DBModel.Store.View_1" store:Type="Views" store:Schema="dbo" store:Name="View_1">
+            <DefiningQuery>SELECT 
+      [View_1].[PersonalID] AS [PersonalID], 
+      [View_1].[FirstName] AS [FirstName], 
+      [View_1].[LastName] AS [LastName], 
+      [View_1].[DepName] AS [DepName], 
+      [View_1].[JobName] AS [JobName], 
+      [View_1].[AName] AS [AName]
+      FROM [dbo].[View_1] AS [View_1]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="viewremainVacs" EntityType="OTA_DBModel.Store.viewremainVacs" store:Type="Views" store:Schema="dbo" store:Name="viewremainVacs">
+            <DefiningQuery>SELECT 
+      [viewremainVacs].[YearName] AS [YearName], 
+      [viewremainVacs].[IdcTypeName] AS [IdcTypeName], 
+      [viewremainVacs].[IdcName] AS [IdcName], 
+      [viewremainVacs].[PersonalID] AS [PersonalID], 
+      [viewremainVacs].[FirstName] AS [FirstName], 
+      [viewremainVacs].[LastName] AS [LastName], 
+      [viewremainVacs].[RemainVac] AS [RemainVac], 
+      [viewremainVacs].[MaxInYear] AS [MaxInYear], 
+      [viewremainVacs].[Period] AS [Period], 
+      [viewremainVacs].[MaxInPeriod] AS [MaxInPeriod], 
+      [viewremainVacs].[MaxTransfer] AS [MaxTransfer], 
+      [viewremainVacs].[YearId] AS [YearId], 
+      [viewremainVacs].[IdcTypeId] AS [IdcTypeId], 
+      [viewremainVacs].[Expr1] AS [Expr1], 
+      [viewremainVacs].[IdcId] AS [IdcId], 
+      [viewremainVacs].[VacInfoId] AS [VacInfoId], 
+      [viewremainVacs].[VacId] AS [VacId], 
+      [viewremainVacs].[DepId] AS [DepId]
+      FROM [dbo].[viewremainVacs] AS [viewremainVacs]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="viewTotalIndirect" EntityType="OTA_DBModel.Store.viewTotalIndirect" store:Type="Views" store:Schema="dbo" store:Name="viewTotalIndirect">
+            <DefiningQuery>SELECT 
+      [viewTotalIndirect].[Tarikh] AS [Tarikh], 
+      [viewTotalIndirect].[PersonalID] AS [PersonalID], 
+      [viewTotalIndirect].[IdcName] AS [IdcName], 
+      [viewTotalIndirect].[StartTime] AS [StartTime], 
+      [viewTotalIndirect].[EndTime] AS [EndTime], 
+      [viewTotalIndirect].[dayId] AS [dayId], 
+      [viewTotalIndirect].[Rooz] AS [Rooz], 
+      [viewTotalIndirect].[IdcId] AS [IdcId], 
+      [viewTotalIndirect].[IdcTypeId] AS [IdcTypeId], 
+      [viewTotalIndirect].[IdcTypeName] AS [IdcTypeName], 
+      [viewTotalIndirect].[FirstName] AS [FirstName], 
+      [viewTotalIndirect].[LastName] AS [LastName], 
+      [viewTotalIndirect].[DepName] AS [DepName], 
+      [viewTotalIndirect].[DepId] AS [DepId], 
+      [viewTotalIndirect].[YearId] AS [YearId], 
+      [viewTotalIndirect].[YearName] AS [YearName], 
+      [viewTotalIndirect].[DsName] AS [DsName]
+      FROM [dbo].[viewTotalIndirect] AS [viewTotalIndirect]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_DaysOfYear_DayState" Association="OTA_DBModel.Store.FK_DaysOfYear_DayState">
+            <End Role="DayState" EntitySet="DayState" />
+            <End Role="DaysOfYear" EntitySet="DaysOfYear" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaysOfYear_Year1" Association="OTA_DBModel.Store.FK_DaysOfYear_Year1">
+            <End Role="Year" EntitySet="Year" />
+            <End Role="DaysOfYear" EntitySet="DaysOfYear" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DcDepJob_Departman_Job" Association="OTA_DBModel.Store.FK_DcDepJob_Departman_Job">
+            <End Role="Departman_Job" EntitySet="Departman_Job" />
+            <End Role="DcDepJob" EntitySet="DcDepJob" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DcDepJob_DirectCodes" Association="OTA_DBModel.Store.FK_DcDepJob_DirectCodes">
+            <End Role="DirectCodes" EntitySet="DirectCodes" />
+            <End Role="DcDepJob" EntitySet="DcDepJob" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Departman_Job_Departmans" Association="OTA_DBModel.Store.FK_Departman_Job_Departmans">
+            <End Role="Departmans" EntitySet="Departmans" />
+            <End Role="Departman_Job" EntitySet="Departman_Job" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Departman_Job_Jobs" Association="OTA_DBModel.Store.FK_Departman_Job_Jobs">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="Departman_Job" EntitySet="Departman_Job" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InDirectCodes_InDirectCodesType" Association="OTA_DBModel.Store.FK_InDirectCodes_InDirectCodesType">
+            <End Role="InDirectCodesType" EntitySet="InDirectCodesType" />
+            <End Role="InDirectCodes" EntitySet="InDirectCodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_AccessLevel" Association="OTA_DBModel.Store.FK_Personals_AccessLevel">
+            <End Role="AccessLevel" EntitySet="AccessLevel" />
+            <End Role="Personals" EntitySet="Personals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_Departmans" Association="OTA_DBModel.Store.FK_Personals_Departmans">
+            <End Role="Departmans" EntitySet="Departmans" />
+            <End Role="Personals" EntitySet="Personals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_DirectCode_CodeState" Association="OTA_DBModel.Store.FK_Personals_DirectCode_CodeState">
+            <End Role="CodeState" EntitySet="CodeState" />
+            <End Role="Personals_DirectCode" EntitySet="Personals_DirectCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_DirectCode_DaysOfYear" Association="OTA_DBModel.Store.FK_Personals_DirectCode_DaysOfYear">
+            <End Role="DaysOfYear" EntitySet="DaysOfYear" />
+            <End Role="Personals_DirectCode" EntitySet="Personals_DirectCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_DirectCode_DirectCodes" Association="OTA_DBModel.Store.FK_Personals_DirectCode_DirectCodes">
+            <End Role="DirectCodes" EntitySet="DirectCodes" />
+            <End Role="Personals_DirectCode" EntitySet="Personals_DirectCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_DirectCode_Personals" Association="OTA_DBModel.Store.FK_Personals_DirectCode_Personals">
+            <End Role="Personals" EntitySet="Personals" />
+            <End Role="Personals_DirectCode" EntitySet="Personals_DirectCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_InDirectCode_CodeState" Association="OTA_DBModel.Store.FK_Personals_InDirectCode_CodeState">
+            <End Role="CodeState" EntitySet="CodeState" />
+            <End Role="Personals_InDirectCode" EntitySet="Personals_InDirectCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_InDirectCode_DaysOfYear" Association="OTA_DBModel.Store.FK_Personals_InDirectCode_DaysOfYear">
+            <End Role="DaysOfYear" EntitySet="DaysOfYear" />
+            <End Role="Personals_InDirectCode" EntitySet="Personals_InDirectCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_InDirectCode_InDirectCodes" Association="OTA_DBModel.Store.FK_Personals_InDirectCode_InDirectCodes">
+            <End Role="InDirectCodes" EntitySet="InDirectCodes" />
+            <End Role="Personals_InDirectCode" EntitySet="Personals_InDirectCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_InDirectCode_Personals" Association="OTA_DBModel.Store.FK_Personals_InDirectCode_Personals">
+            <End Role="Personals" EntitySet="Personals" />
+            <End Role="Personals_InDirectCode" EntitySet="Personals_InDirectCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_Jobs" Association="OTA_DBModel.Store.FK_Personals_Jobs">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="Personals" EntitySet="Personals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_Vacations_Personals_InDirectCode" Association="OTA_DBModel.Store.FK_Personals_Vacations_Personals_InDirectCode">
+            <End Role="Personals_InDirectCode" EntitySet="Personals_InDirectCode" />
+            <End Role="Personals_Vacations" EntitySet="Personals_Vacations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_Vacations_Vac_Info" Association="OTA_DBModel.Store.FK_Personals_Vacations_Vac_Info">
+            <End Role="Vac_Info" EntitySet="Vac_Info" />
+            <End Role="Personals_Vacations" EntitySet="Personals_Vacations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RemainVacations_Personals" Association="OTA_DBModel.Store.FK_RemainVacations_Personals">
+            <End Role="Personals" EntitySet="Personals" />
+            <End Role="RemainVacations" EntitySet="RemainVacations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RemainVacations_Vac_Info" Association="OTA_DBModel.Store.FK_RemainVacations_Vac_Info">
+            <End Role="Vac_Info" EntitySet="Vac_Info" />
+            <End Role="RemainVacations" EntitySet="RemainVacations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vac_Info_InDirectCodes" Association="OTA_DBModel.Store.FK_Vac_Info_InDirectCodes">
+            <End Role="InDirectCodes" EntitySet="InDirectCodes" />
+            <End Role="Vac_Info" EntitySet="Vac_Info" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vac_Info_Year1" Association="OTA_DBModel.Store.FK_Vac_Info_Year1">
+            <End Role="Year" EntitySet="Year" />
+            <End Role="Vac_Info" EntitySet="Vac_Info" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AccessLevel">
+          <Key>
+            <PropertyRef Name="AId" />
+          </Key>
+          <Property Name="AId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Admins">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Name="AdminId" Type="int" Nullable="false" />
+          <Property Name="AdminName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Pass" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CodeState">
+          <Key>
+            <PropertyRef Name="DcsId" />
+          </Key>
+          <Property Name="DcsId" Type="bit" Nullable="false" />
+          <Property Name="DscName" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="DscNote" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="DaysOfYear">
+          <Key>
+            <PropertyRef Name="dayId" />
+          </Key>
+          <Property Name="dayId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Tarikh" Type="date" Nullable="false" />
+          <Property Name="Rooz" Type="nvarchar" Nullable="false" MaxLength="8" />
+          <Property Name="DsId" Type="int" Nullable="false" />
+          <Property Name="StartLunchTime" Type="time" />
+          <Property Name="EndLunchTime" Type="time" />
+          <Property Name="StartWorkTime" Type="time" />
+          <Property Name="EndWorkTime" Type="time" />
+          <Property Name="YearId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DayState">
+          <Key>
+            <PropertyRef Name="DsId" />
+          </Key>
+          <Property Name="DsId" Type="int" Nullable="false" />
+          <Property Name="DsName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DsNote" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="DcDepJob">
+          <Key>
+            <PropertyRef Name="DcDepJobId" />
+          </Key>
+          <Property Name="DcDepJobId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DcId" Type="int" Nullable="false" />
+          <Property Name="DepJobId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Departman_Job">
+          <Key>
+            <PropertyRef Name="DepJobId" />
+          </Key>
+          <Property Name="DepJobId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DepId" Type="int" Nullable="false" />
+          <Property Name="JobId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Departmans">
+          <Key>
+            <PropertyRef Name="DepId" />
+          </Key>
+          <Property Name="DepId" Type="int" Nullable="false" />
+          <Property Name="DepName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DepNote" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="DirectCodes">
+          <Key>
+            <PropertyRef Name="DcId" />
+          </Key>
+          <Property Name="DcId" Type="int" Nullable="false" />
+          <Property Name="DcName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="DcNote" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Education">
+          <Key>
+            <PropertyRef Name="EduId" />
+          </Key>
+          <Property Name="EduId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EduName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="InDirectCodes">
+          <Key>
+            <PropertyRef Name="IdcId" />
+          </Key>
+          <Property Name="IdcId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdcTypeId" Type="int" Nullable="false" />
+          <Property Name="IdcName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdcNote" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="InDirectCodesType">
+          <Key>
+            <PropertyRef Name="IdcTypeId" />
+          </Key>
+          <Property Name="IdcTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdcTypeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdcTypeNote" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Jobs">
+          <Key>
+            <PropertyRef Name="JobId" />
+          </Key>
+          <Property Name="JobId" Type="int" Nullable="false" />
+          <Property Name="JobName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="JobNote" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Personals">
+          <Key>
+            <PropertyRef Name="PersonalID" />
+          </Key>
+          <Property Name="PersonalID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DepId" Type="int" Nullable="false" />
+          <Property Name="JobId" Type="int" Nullable="false" />
+          <Property Name="AId" Type="int" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="ShSh" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="BirthDay" Type="date" Nullable="false" />
+          <Property Name="EduId" Type="int" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" Nullable="false" MaxLength="11" />
+          <Property Name="StartContract" Type="date" Nullable="false" />
+          <Property Name="EndContract" Type="date" Nullable="false" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="15" />
+          <Property Name="Address" Type="nvarchar" MaxLength="300" />
+          <Property Name="PersonalsNote" Type="nvarchar(max)" />
+          <Property Name="LastVisited" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Personals_DirectCode">
+          <Key>
+            <PropertyRef Name="PdcId" />
+          </Key>
+          <Property Name="PdcId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PerId" Type="int" Nullable="false" />
+          <Property Name="DcId" Type="int" Nullable="false" />
+          <Property Name="StartTime" Type="time" Nullable="false" />
+          <Property Name="EndTime" Type="time" Nullable="false" />
+          <Property Name="dayId" Type="int" Nullable="false" />
+          <Property Name="DcsId" Type="bit" />
+          <Property Name="Note" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Personals_InDirectCode">
+          <Key>
+            <PropertyRef Name="PidcId" />
+          </Key>
+          <Property Name="PidcId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PerId" Type="int" Nullable="false" />
+          <Property Name="IdcId" Type="int" Nullable="false" />
+          <Property Name="StartTime" Type="time" Nullable="false" />
+          <Property Name="EndTime" Type="time" Nullable="false" />
+          <Property Name="dayId" Type="int" Nullable="false" />
+          <Property Name="DcsId" Type="bit" Nullable="false" />
+          <Property Name="Note" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Personals_Vacations">
+          <Key>
+            <PropertyRef Name="PersonelVacId" />
+          </Key>
+          <Property Name="PersonelVacId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PidcId" Type="int" Nullable="false" />
+          <Property Name="VacInfoId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RemainVacations">
+          <Key>
+            <PropertyRef Name="VpId" />
+          </Key>
+          <Property Name="VpId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VacInfoId" Type="int" Nullable="false" />
+          <Property Name="PerId" Type="int" Nullable="false" />
+          <Property Name="RemainVac" Type="float" Nullable="false" />
+          <Property Name="VpNote" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Vac_Info">
+          <Key>
+            <PropertyRef Name="VacInfoId" />
+          </Key>
+          <Property Name="VacInfoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VacId" Type="int" Nullable="false" />
+          <Property Name="MaxInYear" Type="float" />
+          <Property Name="Period" Type="tinyint" />
+          <Property Name="MaxInPeriod" Type="float" />
+          <Property Name="MaxTransfer" Type="float" />
+          <Property Name="VacNote" Type="nvarchar(max)" />
+          <Property Name="YearId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Year">
+          <Key>
+            <PropertyRef Name="YearId" />
+          </Key>
+          <Property Name="YearId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="YearName" Type="nchar" Nullable="false" MaxLength="4" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OTA_DB.dbo.Per_Dep_Job' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Per_Dep_Job">
+          <Key>
+            <PropertyRef Name="PersonalID" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="PersonalID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DepId" Type="int" Nullable="false" />
+          <Property Name="JobId" Type="int" Nullable="false" />
+          <Property Name="AId" Type="int" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="ShSh" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="BirthDay" Type="date" Nullable="false" />
+          <Property Name="EduId" Type="int" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" Nullable="false" MaxLength="11" />
+          <Property Name="StartContract" Type="date" Nullable="false" />
+          <Property Name="EndContract" Type="date" Nullable="false" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="15" />
+          <Property Name="Address" Type="nvarchar" MaxLength="300" />
+          <Property Name="PersonalsNote" Type="nvarchar(max)" />
+          <Property Name="LastVisited" Type="datetime" />
+          <Property Name="DepName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="EduName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="JobName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="AName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OTA_DB.dbo.rpt_PersonalList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="rpt_PersonalList">
+          <Key>
+            <PropertyRef Name="PersonalID" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="PersonalID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="EduId" Type="int" Nullable="false" />
+          <Property Name="DepId" Type="int" Nullable="false" />
+          <Property Name="JobId" Type="int" Nullable="false" />
+          <Property Name="AId" Type="int" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="ShSh" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="Tavalod" Type="varchar" MaxLength="10" />
+          <Property Name="Mobile" Type="nvarchar" Nullable="false" MaxLength="11" />
+          <Property Name="StartCont" Type="varchar" MaxLength="10" />
+          <Property Name="EndCont" Type="varchar" MaxLength="10" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="15" />
+          <Property Name="Address" Type="nvarchar" MaxLength="300" />
+          <Property Name="PersonalsNote" Type="nvarchar(max)" />
+          <Property Name="LastVisit" Type="varchar" MaxLength="10" />
+          <Property Name="DepName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="EduName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="JobName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="AName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OTA_DB.dbo.rptDirect' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="rptDirect">
+          <Key>
+            <PropertyRef Name="Tarikh" />
+            <PropertyRef Name="Rooz" />
+            <PropertyRef Name="DcName" />
+            <PropertyRef Name="DsName" />
+            <PropertyRef Name="DepName" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="ShSh" />
+            <PropertyRef Name="BirthDay" />
+            <PropertyRef Name="Mobile" />
+            <PropertyRef Name="StartContract" />
+            <PropertyRef Name="EndContract" />
+            <PropertyRef Name="YearName" />
+            <PropertyRef Name="EduName" />
+            <PropertyRef Name="JobName" />
+            <PropertyRef Name="PersonalID" />
+            <PropertyRef Name="DscName" />
+            <PropertyRef Name="StartTime" />
+            <PropertyRef Name="EndTime" />
+          </Key>
+          <Property Name="charStartTime" Type="char" MaxLength="8" />
+          <Property Name="charEndTime" Type="char" MaxLength="8" />
+          <Property Name="Tarikh" Type="date" Nullable="false" />
+          <Property Name="Rooz" Type="nvarchar" Nullable="false" MaxLength="8" />
+          <Property Name="DcName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="DsName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DepName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ShSh" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="BirthDay" Type="date" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" Nullable="false" MaxLength="11" />
+          <Property Name="StartContract" Type="date" Nullable="false" />
+          <Property Name="EndContract" Type="date" Nullable="false" />
+          <Property Name="YearName" Type="nchar" Nullable="false" MaxLength="4" />
+          <Property Name="EduName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="JobName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PersonalID" Type="int" Nullable="false" />
+          <Property Name="DscName" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="WorkTimeDateTime" Type="datetime" />
+          <Property Name="WorkHourTime" Type="int" />
+          <Property Name="WorkMinTime" Type="int" />
+          <Property Name="StartTime" Type="time" Nullable="false" />
+          <Property Name="EndTime" Type="time" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OTA_DB.dbo.rptInDirect' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="rptInDirect">
+          <Key>
+            <PropertyRef Name="DepName" />
+            <PropertyRef Name="DscName" />
+            <PropertyRef Name="Tarikh" />
+            <PropertyRef Name="Rooz" />
+            <PropertyRef Name="DsName" />
+            <PropertyRef Name="IdcTypeName" />
+            <PropertyRef Name="IdcName" />
+            <PropertyRef Name="EduName" />
+            <PropertyRef Name="JobName" />
+            <PropertyRef Name="StartTime" />
+            <PropertyRef Name="EndTime" />
+            <PropertyRef Name="RemainVac" />
+            <PropertyRef Name="YearName" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="PersonalID" />
+            <PropertyRef Name="ShSh" />
+            <PropertyRef Name="BirthDay" />
+            <PropertyRef Name="Mobile" />
+            <PropertyRef Name="StartContract" />
+            <PropertyRef Name="EndContract" />
+          </Key>
+          <Property Name="DepName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DscName" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="Tarikh" Type="date" Nullable="false" />
+          <Property Name="Rooz" Type="nvarchar" Nullable="false" MaxLength="8" />
+          <Property Name="DsName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdcTypeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdcName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="EduName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="JobName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="StartTime" Type="time" Nullable="false" />
+          <Property Name="EndTime" Type="time" Nullable="false" />
+          <Property Name="RemainVac" Type="float" Nullable="false" />
+          <Property Name="YearName" Type="nchar" Nullable="false" MaxLength="4" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PersonalID" Type="int" Nullable="false" />
+          <Property Name="ShSh" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="BirthDay" Type="date" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" Nullable="false" MaxLength="11" />
+          <Property Name="StartContract" Type="date" Nullable="false" />
+          <Property Name="EndContract" Type="date" Nullable="false" />
+          <Property Name="MaxTransfer" Type="float" />
+          <Property Name="MaxInYear" Type="float" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OTA_DB.dbo.rptInDirects' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="rptInDirects">
+          <Key>
+            <PropertyRef Name="PersonalID" />
+            <PropertyRef Name="Tarikh" />
+            <PropertyRef Name="EndTime" />
+            <PropertyRef Name="StartTime" />
+            <PropertyRef Name="IdcTypeName" />
+            <PropertyRef Name="IdcName" />
+            <PropertyRef Name="DscName" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+          </Key>
+          <Property Name="PersonalID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="charStartTime" Type="char" MaxLength="8" />
+          <Property Name="charEndTime" Type="char" MaxLength="8" />
+          <Property Name="EndTime" Type="time" Nullable="false" />
+          <Property Name="StartTime" Type="time" Nullable="false" />
+          <Property Name="IdcTypeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdcName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DscName" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="Rooz" Type="nvarchar" Nullable="false" MaxLength="8" />
+          <Property Name="Tarikh" Type="date" Nullable="false" />
+          <Property Name="DepName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="JobName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="EduName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ShSh" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="BirthDay" Type="date" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" Nullable="false" MaxLength="11" />
+          <Property Name="StartContract" Type="date" Nullable="false" />
+          <Property Name="EndContract" Type="date" Nullable="false" />
+          <Property Name="ActHourTime" Type="int" />
+          <Property Name="ActMinTime" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OTA_DB.dbo.rptVacation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="rptVacation">
+          <Key>
+            <PropertyRef Name="StartTime" />
+            <PropertyRef Name="EndTime" />
+            <PropertyRef Name="IdcTypeName" />
+            <PropertyRef Name="IdcName" />
+            <PropertyRef Name="PersonalID" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="Rooz" />
+            <PropertyRef Name="Tarikh" />
+            <PropertyRef Name="DscName" />
+            <PropertyRef Name="DsName" />
+            <PropertyRef Name="DepName" />
+            <PropertyRef Name="JobName" />
+            <PropertyRef Name="EduName" />
+            <PropertyRef Name="RemainVac" />
+          </Key>
+          <Property Name="StartTime" Type="time" Nullable="false" />
+          <Property Name="EndTime" Type="time" Nullable="false" />
+          <Property Name="IdcTypeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdcName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PersonalID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Rooz" Type="nvarchar" Nullable="false" MaxLength="8" />
+          <Property Name="Tarikh" Type="date" Nullable="false" />
+          <Property Name="DscName" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="DsName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DepName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="JobName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="EduName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="RemainVac" Type="float" Nullable="false" />
+          <Property Name="MaxInYear" Type="float" />
+          <Property Name="Period" Type="tinyint" />
+          <Property Name="MaxInPeriod" Type="float" />
+          <Property Name="MaxTransfer" Type="float" />
+          <Property Name="charStartTime" Type="char" MaxLength="8" />
+          <Property Name="charEndTime" Type="char" MaxLength="8" />
+          <Property Name="WorkTimeDateTime" Type="datetime" />
+          <Property Name="WorkHourTime" Type="int" />
+          <Property Name="WorkMinTime" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OTA_DB.dbo.View_1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="View_1">
+          <Key>
+            <PropertyRef Name="PersonalID" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="DepName" />
+            <PropertyRef Name="JobName" />
+            <PropertyRef Name="AName" />
+          </Key>
+          <Property Name="PersonalID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DepName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="JobName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="AName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OTA_DB.dbo.viewremainVacs' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="viewremainVacs">
+          <Key>
+            
+            
+            
+            <PropertyRef Name="PersonalID" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="YearName" Type="nchar" Nullable="false" MaxLength="4" />
+          <Property Name="IdcTypeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdcName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PersonalID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="RemainVac" Type="float" Nullable="false" />
+          <Property Name="MaxInYear" Type="float" />
+          <Property Name="Period" Type="tinyint" />
+          <Property Name="MaxInPeriod" Type="float" />
+          <Property Name="MaxTransfer" Type="float" />
+          <Property Name="YearId" Type="int" Nullable="false" />
+          <Property Name="IdcTypeId" Type="int" Nullable="false" />
+          <Property Name="Expr1" Type="int" Nullable="false" />
+          <Property Name="IdcId" Type="int" Nullable="false" />
+          <Property Name="VacInfoId" Type="int" Nullable="false" />
+          <Property Name="VacId" Type="int" Nullable="false" />
+          <Property Name="DepId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OTA_DB.dbo.viewTotalIndirect' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="viewTotalIndirect">
+          <Key>
+            
+            <PropertyRef Name="PersonalID" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="Tarikh" Type="date" Nullable="false" />
+          <Property Name="PersonalID" Type="int" Nullable="false" />
+          <Property Name="IdcName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="StartTime" Type="time" Nullable="false" />
+          <Property Name="EndTime" Type="time" Nullable="false" />
+          <Property Name="dayId" Type="int" Nullable="false" />
+          <Property Name="Rooz" Type="nvarchar" Nullable="false" MaxLength="8" />
+          <Property Name="IdcId" Type="int" Nullable="false" />
+          <Property Name="IdcTypeId" Type="int" Nullable="false" />
+          <Property Name="IdcTypeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DepName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DepId" Type="int" Nullable="false" />
+          <Property Name="YearId" Type="int" Nullable="false" />
+          <Property Name="YearName" Type="nchar" Nullable="false" MaxLength="4" />
+          <Property Name="DsName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_DaysOfYear_DayState">
+          <End Role="DayState" Type="OTA_DBModel.Store.DayState" Multiplicity="1" />
+          <End Role="DaysOfYear" Type="OTA_DBModel.Store.DaysOfYear" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DayState">
+              <PropertyRef Name="DsId" />
+            </Principal>
+            <Dependent Role="DaysOfYear">
+              <PropertyRef Name="DsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaysOfYear_Year1">
+          <End Role="Year" Type="OTA_DBModel.Store.Year" Multiplicity="1" />
+          <End Role="DaysOfYear" Type="OTA_DBModel.Store.DaysOfYear" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Year">
+              <PropertyRef Name="YearId" />
+            </Principal>
+            <Dependent Role="DaysOfYear">
+              <PropertyRef Name="YearId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DcDepJob_Departman_Job">
+          <End Role="Departman_Job" Type="OTA_DBModel.Store.Departman_Job" Multiplicity="1" />
+          <End Role="DcDepJob" Type="OTA_DBModel.Store.DcDepJob" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departman_Job">
+              <PropertyRef Name="DepJobId" />
+            </Principal>
+            <Dependent Role="DcDepJob">
+              <PropertyRef Name="DepJobId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DcDepJob_DirectCodes">
+          <End Role="DirectCodes" Type="OTA_DBModel.Store.DirectCodes" Multiplicity="1" />
+          <End Role="DcDepJob" Type="OTA_DBModel.Store.DcDepJob" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DirectCodes">
+              <PropertyRef Name="DcId" />
+            </Principal>
+            <Dependent Role="DcDepJob">
+              <PropertyRef Name="DcId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Departman_Job_Departmans">
+          <End Role="Departmans" Type="OTA_DBModel.Store.Departmans" Multiplicity="1" />
+          <End Role="Departman_Job" Type="OTA_DBModel.Store.Departman_Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departmans">
+              <PropertyRef Name="DepId" />
+            </Principal>
+            <Dependent Role="Departman_Job">
+              <PropertyRef Name="DepId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Departman_Job_Jobs">
+          <End Role="Jobs" Type="OTA_DBModel.Store.Jobs" Multiplicity="1" />
+          <End Role="Departman_Job" Type="OTA_DBModel.Store.Departman_Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="JobId" />
+            </Principal>
+            <Dependent Role="Departman_Job">
+              <PropertyRef Name="JobId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InDirectCodes_InDirectCodesType">
+          <End Role="InDirectCodesType" Type="OTA_DBModel.Store.InDirectCodesType" Multiplicity="1" />
+          <End Role="InDirectCodes" Type="OTA_DBModel.Store.InDirectCodes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InDirectCodesType">
+              <PropertyRef Name="IdcTypeId" />
+            </Principal>
+            <Dependent Role="InDirectCodes">
+              <PropertyRef Name="IdcTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_AccessLevel">
+          <End Role="AccessLevel" Type="OTA_DBModel.Store.AccessLevel" Multiplicity="1" />
+          <End Role="Personals" Type="OTA_DBModel.Store.Personals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccessLevel">
+              <PropertyRef Name="AId" />
+            </Principal>
+            <Dependent Role="Personals">
+              <PropertyRef Name="AId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_Departmans">
+          <End Role="Departmans" Type="OTA_DBModel.Store.Departmans" Multiplicity="1" />
+          <End Role="Personals" Type="OTA_DBModel.Store.Personals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departmans">
+              <PropertyRef Name="DepId" />
+            </Principal>
+            <Dependent Role="Personals">
+              <PropertyRef Name="DepId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_DirectCode_CodeState">
+          <End Role="CodeState" Type="OTA_DBModel.Store.CodeState" Multiplicity="0..1" />
+          <End Role="Personals_DirectCode" Type="OTA_DBModel.Store.Personals_DirectCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CodeState">
+              <PropertyRef Name="DcsId" />
+            </Principal>
+            <Dependent Role="Personals_DirectCode">
+              <PropertyRef Name="DcsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_DirectCode_DaysOfYear">
+          <End Role="DaysOfYear" Type="OTA_DBModel.Store.DaysOfYear" Multiplicity="1" />
+          <End Role="Personals_DirectCode" Type="OTA_DBModel.Store.Personals_DirectCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DaysOfYear">
+              <PropertyRef Name="dayId" />
+            </Principal>
+            <Dependent Role="Personals_DirectCode">
+              <PropertyRef Name="dayId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_DirectCode_DirectCodes">
+          <End Role="DirectCodes" Type="OTA_DBModel.Store.DirectCodes" Multiplicity="1" />
+          <End Role="Personals_DirectCode" Type="OTA_DBModel.Store.Personals_DirectCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DirectCodes">
+              <PropertyRef Name="DcId" />
+            </Principal>
+            <Dependent Role="Personals_DirectCode">
+              <PropertyRef Name="DcId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_DirectCode_Personals">
+          <End Role="Personals" Type="OTA_DBModel.Store.Personals" Multiplicity="1" />
+          <End Role="Personals_DirectCode" Type="OTA_DBModel.Store.Personals_DirectCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personals">
+              <PropertyRef Name="PersonalID" />
+            </Principal>
+            <Dependent Role="Personals_DirectCode">
+              <PropertyRef Name="PerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_InDirectCode_CodeState">
+          <End Role="CodeState" Type="OTA_DBModel.Store.CodeState" Multiplicity="1" />
+          <End Role="Personals_InDirectCode" Type="OTA_DBModel.Store.Personals_InDirectCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CodeState">
+              <PropertyRef Name="DcsId" />
+            </Principal>
+            <Dependent Role="Personals_InDirectCode">
+              <PropertyRef Name="DcsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_InDirectCode_DaysOfYear">
+          <End Role="DaysOfYear" Type="OTA_DBModel.Store.DaysOfYear" Multiplicity="1" />
+          <End Role="Personals_InDirectCode" Type="OTA_DBModel.Store.Personals_InDirectCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DaysOfYear">
+              <PropertyRef Name="dayId" />
+            </Principal>
+            <Dependent Role="Personals_InDirectCode">
+              <PropertyRef Name="dayId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_InDirectCode_InDirectCodes">
+          <End Role="InDirectCodes" Type="OTA_DBModel.Store.InDirectCodes" Multiplicity="1" />
+          <End Role="Personals_InDirectCode" Type="OTA_DBModel.Store.Personals_InDirectCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InDirectCodes">
+              <PropertyRef Name="IdcId" />
+            </Principal>
+            <Dependent Role="Personals_InDirectCode">
+              <PropertyRef Name="IdcId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_InDirectCode_Personals">
+          <End Role="Personals" Type="OTA_DBModel.Store.Personals" Multiplicity="1" />
+          <End Role="Personals_InDirectCode" Type="OTA_DBModel.Store.Personals_InDirectCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personals">
+              <PropertyRef Name="PersonalID" />
+            </Principal>
+            <Dependent Role="Personals_InDirectCode">
+              <PropertyRef Name="PerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_Jobs">
+          <End Role="Jobs" Type="OTA_DBModel.Store.Jobs" Multiplicity="1" />
+          <End Role="Personals" Type="OTA_DBModel.Store.Personals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="JobId" />
+            </Principal>
+            <Dependent Role="Personals">
+              <PropertyRef Name="JobId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_Vacations_Personals_InDirectCode">
+          <End Role="Personals_InDirectCode" Type="OTA_DBModel.Store.Personals_InDirectCode" Multiplicity="1" />
+          <End Role="Personals_Vacations" Type="OTA_DBModel.Store.Personals_Vacations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personals_InDirectCode">
+              <PropertyRef Name="PidcId" />
+            </Principal>
+            <Dependent Role="Personals_Vacations">
+              <PropertyRef Name="PidcId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_Vacations_Vac_Info">
+          <End Role="Vac_Info" Type="OTA_DBModel.Store.Vac_Info" Multiplicity="1" />
+          <End Role="Personals_Vacations" Type="OTA_DBModel.Store.Personals_Vacations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vac_Info">
+              <PropertyRef Name="VacInfoId" />
+            </Principal>
+            <Dependent Role="Personals_Vacations">
+              <PropertyRef Name="VacInfoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RemainVacations_Personals">
+          <End Role="Personals" Type="OTA_DBModel.Store.Personals" Multiplicity="1" />
+          <End Role="RemainVacations" Type="OTA_DBModel.Store.RemainVacations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personals">
+              <PropertyRef Name="PersonalID" />
+            </Principal>
+            <Dependent Role="RemainVacations">
+              <PropertyRef Name="PerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RemainVacations_Vac_Info">
+          <End Role="Vac_Info" Type="OTA_DBModel.Store.Vac_Info" Multiplicity="1" />
+          <End Role="RemainVacations" Type="OTA_DBModel.Store.RemainVacations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vac_Info">
+              <PropertyRef Name="VacInfoId" />
+            </Principal>
+            <Dependent Role="RemainVacations">
+              <PropertyRef Name="VacInfoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vac_Info_InDirectCodes">
+          <End Role="InDirectCodes" Type="OTA_DBModel.Store.InDirectCodes" Multiplicity="1" />
+          <End Role="Vac_Info" Type="OTA_DBModel.Store.Vac_Info" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InDirectCodes">
+              <PropertyRef Name="IdcId" />
+            </Principal>
+            <Dependent Role="Vac_Info">
+              <PropertyRef Name="VacId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vac_Info_Year1">
+          <End Role="Year" Type="OTA_DBModel.Store.Year" Multiplicity="1" />
+          <End Role="Vac_Info" Type="OTA_DBModel.Store.Vac_Info" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Year">
+              <PropertyRef Name="YearId" />
+            </Principal>
+            <Dependent Role="Vac_Info">
+              <PropertyRef Name="YearId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ft_DiffS_t" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" StoreFunctionName="ft_DiffS@t" Schema="dbo">
+          <Parameter Name="StartTime" Type="time" Mode="In" />
+          <Parameter Name="EndTime" Type="time" Mode="In" />
+        </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dayStateDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DsId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_dayStateInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DsId" Type="int" Mode="In" />
+          <Parameter Name="DsName" Type="nvarchar" Mode="In" />
+          <Parameter Name="DsNote" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dayStateUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SearchId" Type="int" Mode="In" />
+          <Parameter Name="DsId" Type="int" Mode="In" />
+          <Parameter Name="DsName" Type="nvarchar" Mode="In" />
+          <Parameter Name="DsNote" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_deleteDep" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DepId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_insertDep" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DepId" Type="int" Mode="In" />
+          <Parameter Name="DepName" Type="nvarchar" Mode="In" />
+          <Parameter Name="DepNote" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_jobDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="JobId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_jobInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="JobId" Type="int" Mode="In" />
+          <Parameter Name="JobName" Type="nvarchar" Mode="In" />
+          <Parameter Name="JobNote" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_jobUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="JobId" Type="int" Mode="In" />
+          <Parameter Name="JobName" Type="nvarchar" Mode="In" />
+          <Parameter Name="JobNote" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_updateDep" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DepId" Type="int" Mode="In" />
+          <Parameter Name="DepName" Type="nvarchar" Mode="In" />
+          <Parameter Name="DepNot" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OTA_DBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="OTA_DBEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="sp_deleteDep">
+          <Parameter Name="DepId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_insertDep">
+            <Parameter Name="DepId" Mode="In" Type="Int32" />
+            <Parameter Name="DepName" Mode="In" Type="String" />
+            <Parameter Name="DepNote" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_updateDep">
+            <Parameter Name="DepId" Mode="In" Type="Int32" />
+            <Parameter Name="DepName" Mode="In" Type="String" />
+            <Parameter Name="DepNot" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_jobInsert">
+            <Parameter Name="JobId" Mode="In" Type="Int32" />
+            <Parameter Name="JobName" Mode="In" Type="String" />
+            <Parameter Name="JobNote" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_jobDelete">
+          <Parameter Name="JobId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_jobUpdate">
+            <Parameter Name="JobId" Mode="In" Type="Int32" />
+            <Parameter Name="JobName" Mode="In" Type="String" />
+            <Parameter Name="JobNote" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_UpdateDayState">
+            <Parameter Name="SearchId" Mode="In" Type="Int32" />
+            <Parameter Name="DsId" Mode="In" Type="Int32" />
+            <Parameter Name="DsName" Mode="In" Type="String" />
+            <Parameter Name="DsNote" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_InsertDayState">
+            <Parameter Name="DsId" Mode="In" Type="Int32" />
+            <Parameter Name="DsName" Mode="In" Type="String" />
+            <Parameter Name="DsNote" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_DeleteDayState">
+          <Parameter Name="DsId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="AccessLevel" EntityType="OTA_DBModel.AccessLevel" />
+          <EntitySet Name="CodeState" EntityType="OTA_DBModel.CodeState" />
+          <EntitySet Name="DaysOfYear" EntityType="OTA_DBModel.DaysOfYear" />
+          <EntitySet Name="DayState" EntityType="OTA_DBModel.DayState" />
+          <EntitySet Name="DcDepJob" EntityType="OTA_DBModel.DcDepJob" />
+          <EntitySet Name="Departman_Job" EntityType="OTA_DBModel.Departman_Job" />
+          <EntitySet Name="Departmans" EntityType="OTA_DBModel.Departmans" />
+          <EntitySet Name="DirectCodes" EntityType="OTA_DBModel.DirectCodes" />
+          <EntitySet Name="InDirectCodes" EntityType="OTA_DBModel.InDirectCodes" />
+          <EntitySet Name="InDirectCodesType" EntityType="OTA_DBModel.InDirectCodesType" />
+          <EntitySet Name="Jobs" EntityType="OTA_DBModel.Jobs" />
+          <EntitySet Name="Personals_DirectCode" EntityType="OTA_DBModel.Personals_DirectCode" />
+          <EntitySet Name="Personals_InDirectCode" EntityType="OTA_DBModel.Personals_InDirectCode" />
+          <EntitySet Name="Personals_Vacations" EntityType="OTA_DBModel.Personals_Vacations" />
+          <EntitySet Name="RemainVacations" EntityType="OTA_DBModel.RemainVacations" />
+          <EntitySet Name="sysdiagrams" EntityType="OTA_DBModel.sysdiagrams" />
+          <EntitySet Name="Vac_Info" EntityType="OTA_DBModel.Vac_Info" />
+          <EntitySet Name="Year" EntityType="OTA_DBModel.Year" />
+          <AssociationSet Name="FK_Personals_DirectCode_CodeState" Association="OTA_DBModel.FK_Personals_DirectCode_CodeState">
+            <End Role="CodeState" EntitySet="CodeState" />
+            <End Role="Personals_DirectCode" EntitySet="Personals_DirectCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_InDirectCode_CodeState" Association="OTA_DBModel.FK_Personals_InDirectCode_CodeState">
+            <End Role="CodeState" EntitySet="CodeState" />
+            <End Role="Personals_InDirectCode" EntitySet="Personals_InDirectCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaysOfYear_DayState" Association="OTA_DBModel.FK_DaysOfYear_DayState">
+            <End Role="DayState" EntitySet="DayState" />
+            <End Role="DaysOfYear" EntitySet="DaysOfYear" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaysOfYear_Year1" Association="OTA_DBModel.FK_DaysOfYear_Year1">
+            <End Role="Year" EntitySet="Year" />
+            <End Role="DaysOfYear" EntitySet="DaysOfYear" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_DirectCode_DaysOfYear" Association="OTA_DBModel.FK_Personals_DirectCode_DaysOfYear">
+            <End Role="DaysOfYear" EntitySet="DaysOfYear" />
+            <End Role="Personals_DirectCode" EntitySet="Personals_DirectCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_InDirectCode_DaysOfYear" Association="OTA_DBModel.FK_Personals_InDirectCode_DaysOfYear">
+            <End Role="DaysOfYear" EntitySet="DaysOfYear" />
+            <End Role="Personals_InDirectCode" EntitySet="Personals_InDirectCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DcDepJob_Departman_Job" Association="OTA_DBModel.FK_DcDepJob_Departman_Job">
+            <End Role="Departman_Job" EntitySet="Departman_Job" />
+            <End Role="DcDepJob" EntitySet="DcDepJob" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DcDepJob_DirectCodes" Association="OTA_DBModel.FK_DcDepJob_DirectCodes">
+            <End Role="DirectCodes" EntitySet="DirectCodes" />
+            <End Role="DcDepJob" EntitySet="DcDepJob" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Departman_Job_Departmans" Association="OTA_DBModel.FK_Departman_Job_Departmans">
+            <End Role="Departmans" EntitySet="Departmans" />
+            <End Role="Departman_Job" EntitySet="Departman_Job" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Departman_Job_Jobs" Association="OTA_DBModel.FK_Departman_Job_Jobs">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="Departman_Job" EntitySet="Departman_Job" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_DirectCode_DirectCodes" Association="OTA_DBModel.FK_Personals_DirectCode_DirectCodes">
+            <End Role="DirectCodes" EntitySet="DirectCodes" />
+            <End Role="Personals_DirectCode" EntitySet="Personals_DirectCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InDirectCodes_InDirectCodesType" Association="OTA_DBModel.FK_InDirectCodes_InDirectCodesType">
+            <End Role="InDirectCodesType" EntitySet="InDirectCodesType" />
+            <End Role="InDirectCodes" EntitySet="InDirectCodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_InDirectCode_InDirectCodes" Association="OTA_DBModel.FK_Personals_InDirectCode_InDirectCodes">
+            <End Role="InDirectCodes" EntitySet="InDirectCodes" />
+            <End Role="Personals_InDirectCode" EntitySet="Personals_InDirectCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vac_Info_InDirectCodes" Association="OTA_DBModel.FK_Vac_Info_InDirectCodes">
+            <End Role="InDirectCodes" EntitySet="InDirectCodes" />
+            <End Role="Vac_Info" EntitySet="Vac_Info" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_Vacations_Personals_InDirectCode" Association="OTA_DBModel.FK_Personals_Vacations_Personals_InDirectCode">
+            <End Role="Personals_InDirectCode" EntitySet="Personals_InDirectCode" />
+            <End Role="Personals_Vacations" EntitySet="Personals_Vacations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_Vacations_Vac_Info" Association="OTA_DBModel.FK_Personals_Vacations_Vac_Info">
+            <End Role="Vac_Info" EntitySet="Vac_Info" />
+            <End Role="Personals_Vacations" EntitySet="Personals_Vacations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RemainVacations_Vac_Info" Association="OTA_DBModel.FK_RemainVacations_Vac_Info">
+            <End Role="Vac_Info" EntitySet="Vac_Info" />
+            <End Role="RemainVacations" EntitySet="RemainVacations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vac_Info_Year1" Association="OTA_DBModel.FK_Vac_Info_Year1">
+            <End Role="Year" EntitySet="Year" />
+            <End Role="Vac_Info" EntitySet="Vac_Info" />
+          </AssociationSet>
+          <EntitySet Name="Per_Dep_Job" EntityType="OTA_DBModel.Per_Dep_Job" />
+          <EntitySet Name="rpt_PersonalList" EntityType="OTA_DBModel.rpt_PersonalList" />
+          <EntitySet Name="Education" EntityType="OTA_DBModel.Education" />
+          <EntitySet Name="Personals" EntityType="OTA_DBModel.Personals" />
+          <AssociationSet Name="FK_Personals_AccessLevel" Association="OTA_DBModel.FK_Personals_AccessLevel">
+            <End Role="AccessLevel" EntitySet="AccessLevel" />
+            <End Role="Personals" EntitySet="Personals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_Departmans" Association="OTA_DBModel.FK_Personals_Departmans">
+            <End Role="Departmans" EntitySet="Departmans" />
+            <End Role="Personals" EntitySet="Personals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_Education" Association="OTA_DBModel.FK_Personals_Education">
+            <End Role="Education" EntitySet="Education" />
+            <End Role="Personals" EntitySet="Personals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_Jobs" Association="OTA_DBModel.FK_Personals_Jobs">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="Personals" EntitySet="Personals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_DirectCode_Personals" Association="OTA_DBModel.FK_Personals_DirectCode_Personals">
+            <End Role="Personals" EntitySet="Personals" />
+            <End Role="Personals_DirectCode" EntitySet="Personals_DirectCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personals_InDirectCode_Personals" Association="OTA_DBModel.FK_Personals_InDirectCode_Personals">
+            <End Role="Personals" EntitySet="Personals" />
+            <End Role="Personals_InDirectCode" EntitySet="Personals_InDirectCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RemainVacations_Personals" Association="OTA_DBModel.FK_RemainVacations_Personals">
+            <End Role="Personals" EntitySet="Personals" />
+            <End Role="RemainVacations" EntitySet="RemainVacations" />
+          </AssociationSet>
+          <EntitySet Name="Admins" EntityType="OTA_DBModel.Admins" />
+          <EntitySet Name="rptInDirect" EntityType="OTA_DBModel.rptInDirect" />
+          <EntitySet Name="rptVacation" EntityType="OTA_DBModel.rptVacation" />
+          <EntitySet Name="View_1" EntityType="OTA_DBModel.View_1" />
+          <EntitySet Name="rptDirect" EntityType="OTA_DBModel.rptDirect" />
+          <EntitySet Name="viewTotalIndirect" EntityType="OTA_DBModel.viewTotalIndirect" />
+          <EntitySet Name="viewremainVacs" EntityType="OTA_DBModel.viewremainVacs" />
+          <EntitySet Name="rptInDirects" EntityType="OTA_DBModel.rptInDirects" />
+          </EntityContainer>
+        <EntityType Name="AccessLevel">
+          <Key>
+            <PropertyRef Name="AId" />
+          </Key>
+          <Property Type="Int32" Name="AId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="AName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Personals" Relationship="OTA_DBModel.FK_Personals_AccessLevel" FromRole="AccessLevel" ToRole="Personals" />
+        </EntityType>
+        <EntityType Name="CodeState">
+          <Key>
+            <PropertyRef Name="DcsId" />
+          </Key>
+          <Property Type="Boolean" Name="DcsId" Nullable="false" />
+          <Property Type="String" Name="DscName" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DscNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Personals_DirectCode" Relationship="OTA_DBModel.FK_Personals_DirectCode_CodeState" FromRole="CodeState" ToRole="Personals_DirectCode" />
+          <NavigationProperty Name="Personals_InDirectCode" Relationship="OTA_DBModel.FK_Personals_InDirectCode_CodeState" FromRole="CodeState" ToRole="Personals_InDirectCode" />
+        </EntityType>
+        <EntityType Name="DaysOfYear">
+          <Key>
+            <PropertyRef Name="dayId" />
+          </Key>
+          <Property Type="Int32" Name="dayId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Tarikh" Nullable="false" />
+          <Property Type="String" Name="Rooz" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DsId" Nullable="false" />
+          <Property Type="Time" Name="StartLunchTime" />
+          <Property Type="Time" Name="EndLunchTime" />
+          <Property Type="Time" Name="StartWorkTime" />
+          <Property Type="Time" Name="EndWorkTime" />
+          <Property Type="Int32" Name="YearId" Nullable="false" />
+          <NavigationProperty Name="DayState" Relationship="OTA_DBModel.FK_DaysOfYear_DayState" FromRole="DaysOfYear" ToRole="DayState" />
+          <NavigationProperty Name="Year" Relationship="OTA_DBModel.FK_DaysOfYear_Year1" FromRole="DaysOfYear" ToRole="Year" />
+          <NavigationProperty Name="Personals_DirectCode" Relationship="OTA_DBModel.FK_Personals_DirectCode_DaysOfYear" FromRole="DaysOfYear" ToRole="Personals_DirectCode" />
+          <NavigationProperty Name="Personals_InDirectCode" Relationship="OTA_DBModel.FK_Personals_InDirectCode_DaysOfYear" FromRole="DaysOfYear" ToRole="Personals_InDirectCode" />
+        </EntityType>
+        <EntityType Name="DayState">
+          <Key>
+            <PropertyRef Name="DsId" />
+          </Key>
+          <Property Type="Int32" Name="DsId" Nullable="false" />
+          <Property Type="String" Name="DsName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DsNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DaysOfYear" Relationship="OTA_DBModel.FK_DaysOfYear_DayState" FromRole="DayState" ToRole="DaysOfYear" />
+        </EntityType>
+        <EntityType Name="DcDepJob">
+          <Key>
+            <PropertyRef Name="DcDepJobId" />
+          </Key>
+          <Property Type="Int32" Name="DcDepJobId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="DcId" Nullable="false" />
+          <Property Type="Int32" Name="DepJobId" Nullable="false" />
+          <NavigationProperty Name="Departman_Job" Relationship="OTA_DBModel.FK_DcDepJob_Departman_Job" FromRole="DcDepJob" ToRole="Departman_Job" />
+          <NavigationProperty Name="DirectCodes" Relationship="OTA_DBModel.FK_DcDepJob_DirectCodes" FromRole="DcDepJob" ToRole="DirectCodes" />
+        </EntityType>
+        <EntityType Name="Departman_Job">
+          <Key>
+            <PropertyRef Name="DepJobId" />
+          </Key>
+          <Property Type="Int32" Name="DepJobId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="DepId" Nullable="false" />
+          <Property Type="Int32" Name="JobId" Nullable="false" />
+          <NavigationProperty Name="DcDepJob" Relationship="OTA_DBModel.FK_DcDepJob_Departman_Job" FromRole="Departman_Job" ToRole="DcDepJob" />
+          <NavigationProperty Name="Departmans" Relationship="OTA_DBModel.FK_Departman_Job_Departmans" FromRole="Departman_Job" ToRole="Departmans" />
+          <NavigationProperty Name="Jobs" Relationship="OTA_DBModel.FK_Departman_Job_Jobs" FromRole="Departman_Job" ToRole="Jobs" />
+        </EntityType>
+        <EntityType Name="Departmans">
+          <Key>
+            <PropertyRef Name="DepId" />
+          </Key>
+          <Property Type="Int32" Name="DepId" Nullable="false" />
+          <Property Type="String" Name="DepName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DepNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Departman_Job" Relationship="OTA_DBModel.FK_Departman_Job_Departmans" FromRole="Departmans" ToRole="Departman_Job" />
+          <NavigationProperty Name="Personals" Relationship="OTA_DBModel.FK_Personals_Departmans" FromRole="Departmans" ToRole="Personals" />
+        </EntityType>
+        <EntityType Name="DirectCodes">
+          <Key>
+            <PropertyRef Name="DcId" />
+          </Key>
+          <Property Type="Int32" Name="DcId" Nullable="false" />
+          <Property Type="String" Name="DcName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DcNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DcDepJob" Relationship="OTA_DBModel.FK_DcDepJob_DirectCodes" FromRole="DirectCodes" ToRole="DcDepJob" />
+          <NavigationProperty Name="Personals_DirectCode" Relationship="OTA_DBModel.FK_Personals_DirectCode_DirectCodes" FromRole="DirectCodes" ToRole="Personals_DirectCode" />
+        </EntityType>
+        <EntityType Name="InDirectCodes">
+          <Key>
+            <PropertyRef Name="IdcId" />
+          </Key>
+          <Property Type="Int32" Name="IdcId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdcTypeId" Nullable="false" />
+          <Property Type="String" Name="IdcName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdcNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="InDirectCodesType" Relationship="OTA_DBModel.FK_InDirectCodes_InDirectCodesType" FromRole="InDirectCodes" ToRole="InDirectCodesType" />
+          <NavigationProperty Name="Personals_InDirectCode" Relationship="OTA_DBModel.FK_Personals_InDirectCode_InDirectCodes" FromRole="InDirectCodes" ToRole="Personals_InDirectCode" />
+          <NavigationProperty Name="Vac_Info" Relationship="OTA_DBModel.FK_Vac_Info_InDirectCodes" FromRole="InDirectCodes" ToRole="Vac_Info" />
+        </EntityType>
+        <EntityType Name="InDirectCodesType">
+          <Key>
+            <PropertyRef Name="IdcTypeId" />
+          </Key>
+          <Property Type="Int32" Name="IdcTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="IdcTypeName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdcTypeNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="InDirectCodes" Relationship="OTA_DBModel.FK_InDirectCodes_InDirectCodesType" FromRole="InDirectCodesType" ToRole="InDirectCodes" />
+        </EntityType>
+        <EntityType Name="Jobs">
+          <Key>
+            <PropertyRef Name="JobId" />
+          </Key>
+          <Property Type="Int32" Name="JobId" Nullable="false" />
+          <Property Type="String" Name="JobName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JobNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Departman_Job" Relationship="OTA_DBModel.FK_Departman_Job_Jobs" FromRole="Jobs" ToRole="Departman_Job" />
+          <NavigationProperty Name="Personals" Relationship="OTA_DBModel.FK_Personals_Jobs" FromRole="Jobs" ToRole="Personals" />
+        </EntityType>
+        <EntityType Name="Personals_DirectCode">
+          <Key>
+            <PropertyRef Name="PdcId" />
+          </Key>
+          <Property Type="Int32" Name="PdcId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PerId" Nullable="false" />
+          <Property Type="Int32" Name="DcId" Nullable="false" />
+          <Property Type="Time" Name="StartTime" Nullable="false" />
+          <Property Type="Time" Name="EndTime" Nullable="false" />
+          <Property Type="Int32" Name="dayId" Nullable="false" />
+          <Property Type="Boolean" Name="DcsId" />
+          <Property Type="String" Name="Note" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CodeState" Relationship="OTA_DBModel.FK_Personals_DirectCode_CodeState" FromRole="Personals_DirectCode" ToRole="CodeState" />
+          <NavigationProperty Name="DaysOfYear" Relationship="OTA_DBModel.FK_Personals_DirectCode_DaysOfYear" FromRole="Personals_DirectCode" ToRole="DaysOfYear" />
+          <NavigationProperty Name="DirectCodes" Relationship="OTA_DBModel.FK_Personals_DirectCode_DirectCodes" FromRole="Personals_DirectCode" ToRole="DirectCodes" />
+          <NavigationProperty Name="Personals" Relationship="OTA_DBModel.FK_Personals_DirectCode_Personals" FromRole="Personals_DirectCode" ToRole="Personals" />
+        </EntityType>
+        <EntityType Name="Personals_InDirectCode">
+          <Key>
+            <PropertyRef Name="PidcId" />
+          </Key>
+          <Property Type="Int32" Name="PidcId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PerId" Nullable="false" />
+          <Property Type="Int32" Name="IdcId" Nullable="false" />
+          <Property Type="Time" Name="StartTime" Nullable="false" />
+          <Property Type="Time" Name="EndTime" Nullable="false" />
+          <Property Type="Int32" Name="dayId" Nullable="false" />
+          <Property Type="Boolean" Name="DcsId" Nullable="false" />
+          <Property Type="String" Name="Note" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CodeState" Relationship="OTA_DBModel.FK_Personals_InDirectCode_CodeState" FromRole="Personals_InDirectCode" ToRole="CodeState" />
+          <NavigationProperty Name="DaysOfYear" Relationship="OTA_DBModel.FK_Personals_InDirectCode_DaysOfYear" FromRole="Personals_InDirectCode" ToRole="DaysOfYear" />
+          <NavigationProperty Name="InDirectCodes" Relationship="OTA_DBModel.FK_Personals_InDirectCode_InDirectCodes" FromRole="Personals_InDirectCode" ToRole="InDirectCodes" />
+          <NavigationProperty Name="Personals_Vacations" Relationship="OTA_DBModel.FK_Personals_Vacations_Personals_InDirectCode" FromRole="Personals_InDirectCode" ToRole="Personals_Vacations" />
+          <NavigationProperty Name="Personals" Relationship="OTA_DBModel.FK_Personals_InDirectCode_Personals" FromRole="Personals_InDirectCode" ToRole="Personals" />
+        </EntityType>
+        <EntityType Name="Personals_Vacations">
+          <Key>
+            <PropertyRef Name="PersonelVacId" />
+          </Key>
+          <Property Type="Int32" Name="PersonelVacId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PidcId" Nullable="false" />
+          <Property Type="Int32" Name="VacInfoId" Nullable="false" />
+          <NavigationProperty Name="Personals_InDirectCode" Relationship="OTA_DBModel.FK_Personals_Vacations_Personals_InDirectCode" FromRole="Personals_Vacations" ToRole="Personals_InDirectCode" />
+          <NavigationProperty Name="Vac_Info" Relationship="OTA_DBModel.FK_Personals_Vacations_Vac_Info" FromRole="Personals_Vacations" ToRole="Vac_Info" />
+        </EntityType>
+        <EntityType Name="RemainVacations">
+          <Key>
+            <PropertyRef Name="VpId" />
+          </Key>
+          <Property Type="Int32" Name="VpId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="VacInfoId" Nullable="false" />
+          <Property Type="Int32" Name="PerId" Nullable="false" />
+          <Property Type="Double" Name="RemainVac" Nullable="false" />
+          <Property Type="String" Name="VpNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Vac_Info" Relationship="OTA_DBModel.FK_RemainVacations_Vac_Info" FromRole="RemainVacations" ToRole="Vac_Info" />
+          <NavigationProperty Name="Personals" Relationship="OTA_DBModel.FK_RemainVacations_Personals" FromRole="RemainVacations" ToRole="Personals" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Vac_Info">
+          <Key>
+            <PropertyRef Name="VacInfoId" />
+          </Key>
+          <Property Type="Int32" Name="VacInfoId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="VacId" Nullable="false" />
+          <Property Type="Double" Name="MaxInYear" />
+          <Property Type="Byte" Name="Period" />
+          <Property Type="Double" Name="MaxInPeriod" />
+          <Property Type="Double" Name="MaxTransfer" />
+          <Property Type="String" Name="VacNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="YearId" Nullable="false" />
+          <NavigationProperty Name="InDirectCodes" Relationship="OTA_DBModel.FK_Vac_Info_InDirectCodes" FromRole="Vac_Info" ToRole="InDirectCodes" />
+          <NavigationProperty Name="Personals_Vacations" Relationship="OTA_DBModel.FK_Personals_Vacations_Vac_Info" FromRole="Vac_Info" ToRole="Personals_Vacations" />
+          <NavigationProperty Name="RemainVacations" Relationship="OTA_DBModel.FK_RemainVacations_Vac_Info" FromRole="Vac_Info" ToRole="RemainVacations" />
+          <NavigationProperty Name="Year" Relationship="OTA_DBModel.FK_Vac_Info_Year1" FromRole="Vac_Info" ToRole="Year" />
+        </EntityType>
+        <EntityType Name="Year">
+          <Key>
+            <PropertyRef Name="YearId" />
+          </Key>
+          <Property Type="Int32" Name="YearId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="YearName" Nullable="false" MaxLength="4" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="DaysOfYear" Relationship="OTA_DBModel.FK_DaysOfYear_Year1" FromRole="Year" ToRole="DaysOfYear" />
+          <NavigationProperty Name="Vac_Info" Relationship="OTA_DBModel.FK_Vac_Info_Year1" FromRole="Year" ToRole="Vac_Info" />
+        </EntityType>
+        <Association Name="FK_Personals_DirectCode_CodeState">
+          <End Type="OTA_DBModel.CodeState" Role="CodeState" Multiplicity="0..1" />
+          <End Type="OTA_DBModel.Personals_DirectCode" Role="Personals_DirectCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CodeState">
+              <PropertyRef Name="DcsId" />
+            </Principal>
+            <Dependent Role="Personals_DirectCode">
+              <PropertyRef Name="DcsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_InDirectCode_CodeState">
+          <End Type="OTA_DBModel.CodeState" Role="CodeState" Multiplicity="1" />
+          <End Type="OTA_DBModel.Personals_InDirectCode" Role="Personals_InDirectCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CodeState">
+              <PropertyRef Name="DcsId" />
+            </Principal>
+            <Dependent Role="Personals_InDirectCode">
+              <PropertyRef Name="DcsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaysOfYear_DayState">
+          <End Type="OTA_DBModel.DayState" Role="DayState" Multiplicity="1" />
+          <End Type="OTA_DBModel.DaysOfYear" Role="DaysOfYear" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DayState">
+              <PropertyRef Name="DsId" />
+            </Principal>
+            <Dependent Role="DaysOfYear">
+              <PropertyRef Name="DsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaysOfYear_Year1">
+          <End Type="OTA_DBModel.Year" Role="Year" Multiplicity="1" />
+          <End Type="OTA_DBModel.DaysOfYear" Role="DaysOfYear" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Year">
+              <PropertyRef Name="YearId" />
+            </Principal>
+            <Dependent Role="DaysOfYear">
+              <PropertyRef Name="YearId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_DirectCode_DaysOfYear">
+          <End Type="OTA_DBModel.DaysOfYear" Role="DaysOfYear" Multiplicity="1" />
+          <End Type="OTA_DBModel.Personals_DirectCode" Role="Personals_DirectCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DaysOfYear">
+              <PropertyRef Name="dayId" />
+            </Principal>
+            <Dependent Role="Personals_DirectCode">
+              <PropertyRef Name="dayId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_InDirectCode_DaysOfYear">
+          <End Type="OTA_DBModel.DaysOfYear" Role="DaysOfYear" Multiplicity="1" />
+          <End Type="OTA_DBModel.Personals_InDirectCode" Role="Personals_InDirectCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DaysOfYear">
+              <PropertyRef Name="dayId" />
+            </Principal>
+            <Dependent Role="Personals_InDirectCode">
+              <PropertyRef Name="dayId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DcDepJob_Departman_Job">
+          <End Type="OTA_DBModel.Departman_Job" Role="Departman_Job" Multiplicity="1" />
+          <End Type="OTA_DBModel.DcDepJob" Role="DcDepJob" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departman_Job">
+              <PropertyRef Name="DepJobId" />
+            </Principal>
+            <Dependent Role="DcDepJob">
+              <PropertyRef Name="DepJobId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DcDepJob_DirectCodes">
+          <End Type="OTA_DBModel.DirectCodes" Role="DirectCodes" Multiplicity="1" />
+          <End Type="OTA_DBModel.DcDepJob" Role="DcDepJob" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DirectCodes">
+              <PropertyRef Name="DcId" />
+            </Principal>
+            <Dependent Role="DcDepJob">
+              <PropertyRef Name="DcId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Departman_Job_Departmans">
+          <End Type="OTA_DBModel.Departmans" Role="Departmans" Multiplicity="1" />
+          <End Type="OTA_DBModel.Departman_Job" Role="Departman_Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departmans">
+              <PropertyRef Name="DepId" />
+            </Principal>
+            <Dependent Role="Departman_Job">
+              <PropertyRef Name="DepId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Departman_Job_Jobs">
+          <End Type="OTA_DBModel.Jobs" Role="Jobs" Multiplicity="1" />
+          <End Type="OTA_DBModel.Departman_Job" Role="Departman_Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="JobId" />
+            </Principal>
+            <Dependent Role="Departman_Job">
+              <PropertyRef Name="JobId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_DirectCode_DirectCodes">
+          <End Type="OTA_DBModel.DirectCodes" Role="DirectCodes" Multiplicity="1" />
+          <End Type="OTA_DBModel.Personals_DirectCode" Role="Personals_DirectCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DirectCodes">
+              <PropertyRef Name="DcId" />
+            </Principal>
+            <Dependent Role="Personals_DirectCode">
+              <PropertyRef Name="DcId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InDirectCodes_InDirectCodesType">
+          <End Type="OTA_DBModel.InDirectCodesType" Role="InDirectCodesType" Multiplicity="1" />
+          <End Type="OTA_DBModel.InDirectCodes" Role="InDirectCodes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InDirectCodesType">
+              <PropertyRef Name="IdcTypeId" />
+            </Principal>
+            <Dependent Role="InDirectCodes">
+              <PropertyRef Name="IdcTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_InDirectCode_InDirectCodes">
+          <End Type="OTA_DBModel.InDirectCodes" Role="InDirectCodes" Multiplicity="1" />
+          <End Type="OTA_DBModel.Personals_InDirectCode" Role="Personals_InDirectCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InDirectCodes">
+              <PropertyRef Name="IdcId" />
+            </Principal>
+            <Dependent Role="Personals_InDirectCode">
+              <PropertyRef Name="IdcId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vac_Info_InDirectCodes">
+          <End Type="OTA_DBModel.InDirectCodes" Role="InDirectCodes" Multiplicity="1" />
+          <End Type="OTA_DBModel.Vac_Info" Role="Vac_Info" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InDirectCodes">
+              <PropertyRef Name="IdcId" />
+            </Principal>
+            <Dependent Role="Vac_Info">
+              <PropertyRef Name="VacId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_Vacations_Personals_InDirectCode">
+          <End Type="OTA_DBModel.Personals_InDirectCode" Role="Personals_InDirectCode" Multiplicity="1" />
+          <End Type="OTA_DBModel.Personals_Vacations" Role="Personals_Vacations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personals_InDirectCode">
+              <PropertyRef Name="PidcId" />
+            </Principal>
+            <Dependent Role="Personals_Vacations">
+              <PropertyRef Name="PidcId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_Vacations_Vac_Info">
+          <End Type="OTA_DBModel.Vac_Info" Role="Vac_Info" Multiplicity="1" />
+          <End Type="OTA_DBModel.Personals_Vacations" Role="Personals_Vacations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vac_Info">
+              <PropertyRef Name="VacInfoId" />
+            </Principal>
+            <Dependent Role="Personals_Vacations">
+              <PropertyRef Name="VacInfoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RemainVacations_Vac_Info">
+          <End Type="OTA_DBModel.Vac_Info" Role="Vac_Info" Multiplicity="1" />
+          <End Type="OTA_DBModel.RemainVacations" Role="RemainVacations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vac_Info">
+              <PropertyRef Name="VacInfoId" />
+            </Principal>
+            <Dependent Role="RemainVacations">
+              <PropertyRef Name="VacInfoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vac_Info_Year1">
+          <End Type="OTA_DBModel.Year" Role="Year" Multiplicity="1" />
+          <End Type="OTA_DBModel.Vac_Info" Role="Vac_Info" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Year">
+              <PropertyRef Name="YearId" />
+            </Principal>
+            <Dependent Role="Vac_Info">
+              <PropertyRef Name="YearId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Per_Dep_Job">
+          <Key>
+            <PropertyRef Name="PersonalID" />
+          </Key>
+          <Property Type="Int32" Name="PersonalID" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DepId" Nullable="false" />
+          <Property Type="Int32" Name="JobId" Nullable="false" />
+          <Property Type="Int32" Name="AId" Nullable="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShSh" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="BirthDay" Nullable="false" />
+          <Property Type="Int32" Name="EduId" Nullable="false" />
+          <Property Type="String" Name="Mobile" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="StartContract" Nullable="false" />
+          <Property Type="DateTime" Name="EndContract" Nullable="false" />
+          <Property Type="String" Name="Tel" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PersonalsNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LastVisited" />
+          <Property Type="String" Name="DepName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EduName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JobName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="rpt_PersonalList">
+          <Key>
+            <PropertyRef Name="PersonalID" />
+          </Key>
+          <Property Type="Int32" Name="PersonalID" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="EduId" Nullable="false" />
+          <Property Type="Int32" Name="DepId" Nullable="false" />
+          <Property Type="Int32" Name="JobId" Nullable="false" />
+          <Property Type="Int32" Name="AId" Nullable="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShSh" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Tavalod" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Mobile" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="StartCont" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EndCont" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Tel" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PersonalsNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastVisit" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DepName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EduName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JobName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Education">
+          <Key>
+            <PropertyRef Name="EduId" />
+          </Key>
+          <Property Type="Int32" Name="EduId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EduName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Personals" Relationship="OTA_DBModel.FK_Personals_Education" FromRole="Education" ToRole="Personals" />
+        </EntityType>
+        <EntityType Name="Personals">
+          <Key>
+            <PropertyRef Name="PersonalID" />
+          </Key>
+          <Property Type="Int32" Name="PersonalID" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DepId" Nullable="false" />
+          <Property Type="Int32" Name="JobId" Nullable="false" />
+          <Property Type="Int32" Name="AId" Nullable="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShSh" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="BirthDay" Nullable="false" />
+          <Property Type="String" Name="Mobile" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="StartContract" Nullable="false" />
+          <Property Type="DateTime" Name="EndContract" Nullable="false" />
+          <Property Type="String" Name="Tel" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PersonalsNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LastVisited" />
+          <Property Type="Int32" Name="EduId" Nullable="false" />
+          <NavigationProperty Name="AccessLevel" Relationship="OTA_DBModel.FK_Personals_AccessLevel" FromRole="Personals" ToRole="AccessLevel" />
+          <NavigationProperty Name="Departmans" Relationship="OTA_DBModel.FK_Personals_Departmans" FromRole="Personals" ToRole="Departmans" />
+          <NavigationProperty Name="Education" Relationship="OTA_DBModel.FK_Personals_Education" FromRole="Personals" ToRole="Education" />
+          <NavigationProperty Name="Jobs" Relationship="OTA_DBModel.FK_Personals_Jobs" FromRole="Personals" ToRole="Jobs" />
+          <NavigationProperty Name="Personals_DirectCode" Relationship="OTA_DBModel.FK_Personals_DirectCode_Personals" FromRole="Personals" ToRole="Personals_DirectCode" />
+          <NavigationProperty Name="Personals_InDirectCode" Relationship="OTA_DBModel.FK_Personals_InDirectCode_Personals" FromRole="Personals" ToRole="Personals_InDirectCode" />
+          <NavigationProperty Name="RemainVacations" Relationship="OTA_DBModel.FK_RemainVacations_Personals" FromRole="Personals" ToRole="RemainVacations" />
+        </EntityType>
+        <Association Name="FK_Personals_AccessLevel">
+          <End Type="OTA_DBModel.AccessLevel" Role="AccessLevel" Multiplicity="1" />
+          <End Type="OTA_DBModel.Personals" Role="Personals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccessLevel">
+              <PropertyRef Name="AId" />
+            </Principal>
+            <Dependent Role="Personals">
+              <PropertyRef Name="AId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_Departmans">
+          <End Type="OTA_DBModel.Departmans" Role="Departmans" Multiplicity="1" />
+          <End Type="OTA_DBModel.Personals" Role="Personals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departmans">
+              <PropertyRef Name="DepId" />
+            </Principal>
+            <Dependent Role="Personals">
+              <PropertyRef Name="DepId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_Education">
+          <End Type="OTA_DBModel.Education" Role="Education" Multiplicity="1" />
+          <End Type="OTA_DBModel.Personals" Role="Personals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Education">
+              <PropertyRef Name="EduId" />
+            </Principal>
+            <Dependent Role="Personals">
+              <PropertyRef Name="EduId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_Jobs">
+          <End Type="OTA_DBModel.Jobs" Role="Jobs" Multiplicity="1" />
+          <End Type="OTA_DBModel.Personals" Role="Personals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="JobId" />
+            </Principal>
+            <Dependent Role="Personals">
+              <PropertyRef Name="JobId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_DirectCode_Personals">
+          <End Type="OTA_DBModel.Personals" Role="Personals" Multiplicity="1" />
+          <End Type="OTA_DBModel.Personals_DirectCode" Role="Personals_DirectCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personals">
+              <PropertyRef Name="PersonalID" />
+            </Principal>
+            <Dependent Role="Personals_DirectCode">
+              <PropertyRef Name="PerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personals_InDirectCode_Personals">
+          <End Type="OTA_DBModel.Personals" Role="Personals" Multiplicity="1" />
+          <End Type="OTA_DBModel.Personals_InDirectCode" Role="Personals_InDirectCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personals">
+              <PropertyRef Name="PersonalID" />
+            </Principal>
+            <Dependent Role="Personals_InDirectCode">
+              <PropertyRef Name="PerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RemainVacations_Personals">
+          <End Type="OTA_DBModel.Personals" Role="Personals" Multiplicity="1" />
+          <End Type="OTA_DBModel.RemainVacations" Role="RemainVacations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personals">
+              <PropertyRef Name="PersonalID" />
+            </Principal>
+            <Dependent Role="RemainVacations">
+              <PropertyRef Name="PerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Admins">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Type="Int32" Name="AdminId" Nullable="false" />
+          <Property Type="String" Name="AdminName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Pass" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="rptInDirect">
+          <Key>
+            <PropertyRef Name="DepName" />
+            <PropertyRef Name="DscName" />
+            <PropertyRef Name="Tarikh" />
+            <PropertyRef Name="Rooz" />
+            <PropertyRef Name="DsName" />
+            <PropertyRef Name="IdcTypeName" />
+            <PropertyRef Name="IdcName" />
+            <PropertyRef Name="EduName" />
+            <PropertyRef Name="JobName" />
+            <PropertyRef Name="StartTime" />
+            <PropertyRef Name="EndTime" />
+            <PropertyRef Name="RemainVac" />
+            <PropertyRef Name="YearName" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="PersonalID" />
+            <PropertyRef Name="ShSh" />
+            <PropertyRef Name="BirthDay" />
+            <PropertyRef Name="Mobile" />
+            <PropertyRef Name="StartContract" />
+            <PropertyRef Name="EndContract" />
+          </Key>
+          <Property Type="String" Name="DepName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DscName" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Tarikh" Nullable="false" />
+          <Property Type="String" Name="Rooz" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DsName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdcTypeName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdcName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EduName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JobName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Time" Name="StartTime" Nullable="false" />
+          <Property Type="Time" Name="EndTime" Nullable="false" />
+          <Property Type="Double" Name="RemainVac" Nullable="false" />
+          <Property Type="String" Name="YearName" Nullable="false" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="PersonalID" Nullable="false" />
+          <Property Type="String" Name="ShSh" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="BirthDay" Nullable="false" />
+          <Property Type="String" Name="Mobile" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="StartContract" Nullable="false" />
+          <Property Type="DateTime" Name="EndContract" Nullable="false" />
+          <Property Type="Double" Name="MaxTransfer" />
+          <Property Type="Double" Name="MaxInYear" />
+        </EntityType>
+        <EntityType Name="rptVacation">
+          <Key>
+            <PropertyRef Name="StartTime" />
+            <PropertyRef Name="EndTime" />
+            <PropertyRef Name="IdcTypeName" />
+            <PropertyRef Name="IdcName" />
+            <PropertyRef Name="PersonalID" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="Rooz" />
+            <PropertyRef Name="Tarikh" />
+            <PropertyRef Name="DscName" />
+            <PropertyRef Name="DsName" />
+            <PropertyRef Name="DepName" />
+            <PropertyRef Name="JobName" />
+            <PropertyRef Name="EduName" />
+            <PropertyRef Name="RemainVac" />
+          </Key>
+          <Property Type="Time" Name="StartTime" Nullable="false" />
+          <Property Type="Time" Name="EndTime" Nullable="false" />
+          <Property Type="String" Name="IdcTypeName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdcName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="PersonalID" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Rooz" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Tarikh" Nullable="false" />
+          <Property Type="String" Name="DscName" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DsName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DepName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JobName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EduName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="RemainVac" Nullable="false" />
+          <Property Type="Double" Name="MaxInYear" />
+          <Property Type="Byte" Name="Period" />
+          <Property Type="Double" Name="MaxInPeriod" />
+          <Property Type="Double" Name="MaxTransfer" />
+          <Property Type="String" Name="charStartTime" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="charEndTime" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="WorkTimeDateTime" />
+          <Property Type="Int32" Name="WorkHourTime" />
+          <Property Type="Int32" Name="WorkMinTime" />
+        </EntityType>
+        <EntityType Name="View_1">
+          <Key>
+            <PropertyRef Name="PersonalID" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="DepName" />
+            <PropertyRef Name="JobName" />
+            <PropertyRef Name="AName" />
+          </Key>
+          <Property Type="Int32" Name="PersonalID" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DepName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JobName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="rptDirect">
+          <Key>
+            <PropertyRef Name="Tarikh" />
+            <PropertyRef Name="Rooz" />
+            <PropertyRef Name="DcName" />
+            <PropertyRef Name="DsName" />
+            <PropertyRef Name="DepName" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="ShSh" />
+            <PropertyRef Name="BirthDay" />
+            <PropertyRef Name="Mobile" />
+            <PropertyRef Name="StartContract" />
+            <PropertyRef Name="EndContract" />
+            <PropertyRef Name="YearName" />
+            <PropertyRef Name="EduName" />
+            <PropertyRef Name="JobName" />
+            <PropertyRef Name="PersonalID" />
+            <PropertyRef Name="DscName" />
+            <PropertyRef Name="StartTime" />
+            <PropertyRef Name="EndTime" />
+          </Key>
+          <Property Type="String" Name="charStartTime" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="charEndTime" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="Tarikh" Nullable="false" />
+          <Property Type="String" Name="Rooz" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DcName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DsName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DepName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShSh" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="BirthDay" Nullable="false" />
+          <Property Type="String" Name="Mobile" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="StartContract" Nullable="false" />
+          <Property Type="DateTime" Name="EndContract" Nullable="false" />
+          <Property Type="String" Name="YearName" Nullable="false" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="EduName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JobName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="PersonalID" Nullable="false" />
+          <Property Type="String" Name="DscName" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="WorkTimeDateTime" />
+          <Property Type="Int32" Name="WorkHourTime" />
+          <Property Type="Int32" Name="WorkMinTime" />
+          <Property Type="Time" Name="StartTime" Nullable="false" />
+          <Property Type="Time" Name="EndTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="viewTotalIndirect">
+          <Key>
+            <PropertyRef Name="PersonalID" />
+          </Key>
+          <Property Type="DateTime" Name="Tarikh" Nullable="false" />
+          <Property Type="Int32" Name="PersonalID" Nullable="false" />
+          <Property Type="String" Name="IdcName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Time" Name="StartTime" Nullable="false" />
+          <Property Type="Time" Name="EndTime" Nullable="false" />
+          <Property Type="Int32" Name="dayId" Nullable="false" />
+          <Property Type="String" Name="Rooz" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="IdcId" Nullable="false" />
+          <Property Type="Int32" Name="IdcTypeId" Nullable="false" />
+          <Property Type="String" Name="IdcTypeName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DepName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DepId" Nullable="false" />
+          <Property Type="Int32" Name="YearId" Nullable="false" />
+          <Property Type="String" Name="YearName" Nullable="false" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="DsName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="viewremainVacs">
+          <Key>
+            <PropertyRef Name="PersonalID" />
+          </Key>
+          <Property Type="String" Name="YearName" Nullable="false" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="IdcTypeName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdcName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="PersonalID" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="RemainVac" Nullable="false" />
+          <Property Type="Double" Name="MaxInYear" />
+          <Property Type="Byte" Name="Period" />
+          <Property Type="Double" Name="MaxInPeriod" Nullable="false" />
+          <Property Type="Double" Name="MaxTransfer" Nullable="false" />
+          <Property Type="Int32" Name="YearId" Nullable="false" />
+          <Property Type="Int32" Name="IdcTypeId" Nullable="false" />
+          <Property Type="Int32" Name="Expr1" Nullable="false" />
+          <Property Type="Int32" Name="IdcId" Nullable="false" />
+          <Property Type="Int32" Name="VacInfoId" Nullable="false" />
+          <Property Type="Int32" Name="VacId" Nullable="false" />
+          <Property Type="Int32" Name="DepId" Nullable="false" />
+        </EntityType>
+        <EntityType Name="rptInDirects">
+          <Key>
+            <PropertyRef Name="PersonalID" />
+            <PropertyRef Name="Tarikh" />
+            <PropertyRef Name="EndTime" />
+            <PropertyRef Name="StartTime" />
+            <PropertyRef Name="IdcTypeName" />
+            <PropertyRef Name="IdcName" />
+            <PropertyRef Name="DscName" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+          </Key>
+          <Property Type="Int32" Name="PersonalID" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="charStartTime" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="charEndTime" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Type="Time" Name="EndTime" Nullable="false" />
+          <Property Type="Time" Name="StartTime" Nullable="false" />
+          <Property Type="String" Name="IdcTypeName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdcName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DscName" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Rooz" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Tarikh" Nullable="false" />
+          <Property Type="String" Name="DepName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JobName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EduName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShSh" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="BirthDay" Nullable="false" />
+          <Property Type="String" Name="Mobile" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="StartContract" Nullable="false" />
+          <Property Type="DateTime" Name="EndContract" Nullable="false" />
+          <Property Type="Int32" Name="ActHourTime" />
+          <Property Type="Int32" Name="ActMinTime" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OTA_DBModelStoreContainer" CdmEntityContainer="OTA_DBEntities">
+          <FunctionImportMapping FunctionImportName="sp_deleteDep" FunctionName="OTA_DBModel.Store.sp_deleteDep" />
+          <FunctionImportMapping FunctionImportName="sp_insertDep" FunctionName="OTA_DBModel.Store.sp_insertDep" />
+          <FunctionImportMapping FunctionImportName="sp_updateDep" FunctionName="OTA_DBModel.Store.sp_updateDep" />
+          <FunctionImportMapping FunctionImportName="sp_jobInsert" FunctionName="OTA_DBModel.Store.sp_jobInsert" />
+          <FunctionImportMapping FunctionImportName="sp_jobDelete" FunctionName="OTA_DBModel.Store.sp_jobDelete" />
+          <FunctionImportMapping FunctionImportName="sp_jobUpdate" FunctionName="OTA_DBModel.Store.sp_jobUpdate" />
+          <FunctionImportMapping FunctionImportName="sp_UpdateDayState" FunctionName="OTA_DBModel.Store.sp_dayStateUpdate" />
+          <FunctionImportMapping FunctionImportName="sp_InsertDayState" FunctionName="OTA_DBModel.Store.sp_dayStateInsert" />
+          <FunctionImportMapping FunctionImportName="sp_DeleteDayState" FunctionName="OTA_DBModel.Store.sp_dayStateDelete" />
+          <EntitySetMapping Name="AccessLevel">
+            <EntityTypeMapping TypeName="OTA_DBModel.AccessLevel">
+              <MappingFragment StoreEntitySet="AccessLevel">
+                <ScalarProperty Name="AName" ColumnName="AName" />
+                <ScalarProperty Name="AId" ColumnName="AId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CodeState">
+            <EntityTypeMapping TypeName="OTA_DBModel.CodeState">
+              <MappingFragment StoreEntitySet="CodeState">
+                <ScalarProperty Name="DscNote" ColumnName="DscNote" />
+                <ScalarProperty Name="DscName" ColumnName="DscName" />
+                <ScalarProperty Name="DcsId" ColumnName="DcsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DaysOfYear">
+            <EntityTypeMapping TypeName="OTA_DBModel.DaysOfYear">
+              <MappingFragment StoreEntitySet="DaysOfYear">
+                <ScalarProperty Name="YearId" ColumnName="YearId" />
+                <ScalarProperty Name="EndWorkTime" ColumnName="EndWorkTime" />
+                <ScalarProperty Name="StartWorkTime" ColumnName="StartWorkTime" />
+                <ScalarProperty Name="EndLunchTime" ColumnName="EndLunchTime" />
+                <ScalarProperty Name="StartLunchTime" ColumnName="StartLunchTime" />
+                <ScalarProperty Name="DsId" ColumnName="DsId" />
+                <ScalarProperty Name="Rooz" ColumnName="Rooz" />
+                <ScalarProperty Name="Tarikh" ColumnName="Tarikh" />
+                <ScalarProperty Name="dayId" ColumnName="dayId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DayState">
+            <EntityTypeMapping TypeName="OTA_DBModel.DayState">
+              <MappingFragment StoreEntitySet="DayState">
+                <ScalarProperty Name="DsNote" ColumnName="DsNote" />
+                <ScalarProperty Name="DsName" ColumnName="DsName" />
+                <ScalarProperty Name="DsId" ColumnName="DsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DcDepJob">
+            <EntityTypeMapping TypeName="OTA_DBModel.DcDepJob">
+              <MappingFragment StoreEntitySet="DcDepJob">
+                <ScalarProperty Name="DepJobId" ColumnName="DepJobId" />
+                <ScalarProperty Name="DcId" ColumnName="DcId" />
+                <ScalarProperty Name="DcDepJobId" ColumnName="DcDepJobId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departman_Job">
+            <EntityTypeMapping TypeName="OTA_DBModel.Departman_Job">
+              <MappingFragment StoreEntitySet="Departman_Job">
+                <ScalarProperty Name="JobId" ColumnName="JobId" />
+                <ScalarProperty Name="DepId" ColumnName="DepId" />
+                <ScalarProperty Name="DepJobId" ColumnName="DepJobId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departmans">
+            <EntityTypeMapping TypeName="OTA_DBModel.Departmans">
+              <MappingFragment StoreEntitySet="Departmans">
+                <ScalarProperty Name="DepNote" ColumnName="DepNote" />
+                <ScalarProperty Name="DepName" ColumnName="DepName" />
+                <ScalarProperty Name="DepId" ColumnName="DepId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DirectCodes">
+            <EntityTypeMapping TypeName="OTA_DBModel.DirectCodes">
+              <MappingFragment StoreEntitySet="DirectCodes">
+                <ScalarProperty Name="DcNote" ColumnName="DcNote" />
+                <ScalarProperty Name="DcName" ColumnName="DcName" />
+                <ScalarProperty Name="DcId" ColumnName="DcId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InDirectCodes">
+            <EntityTypeMapping TypeName="OTA_DBModel.InDirectCodes">
+              <MappingFragment StoreEntitySet="InDirectCodes">
+                <ScalarProperty Name="IdcNote" ColumnName="IdcNote" />
+                <ScalarProperty Name="IdcName" ColumnName="IdcName" />
+                <ScalarProperty Name="IdcTypeId" ColumnName="IdcTypeId" />
+                <ScalarProperty Name="IdcId" ColumnName="IdcId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InDirectCodesType">
+            <EntityTypeMapping TypeName="OTA_DBModel.InDirectCodesType">
+              <MappingFragment StoreEntitySet="InDirectCodesType">
+                <ScalarProperty Name="IdcTypeNote" ColumnName="IdcTypeNote" />
+                <ScalarProperty Name="IdcTypeName" ColumnName="IdcTypeName" />
+                <ScalarProperty Name="IdcTypeId" ColumnName="IdcTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jobs">
+            <EntityTypeMapping TypeName="OTA_DBModel.Jobs">
+              <MappingFragment StoreEntitySet="Jobs">
+                <ScalarProperty Name="JobNote" ColumnName="JobNote" />
+                <ScalarProperty Name="JobName" ColumnName="JobName" />
+                <ScalarProperty Name="JobId" ColumnName="JobId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personals_DirectCode">
+            <EntityTypeMapping TypeName="OTA_DBModel.Personals_DirectCode">
+              <MappingFragment StoreEntitySet="Personals_DirectCode">
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="DcsId" ColumnName="DcsId" />
+                <ScalarProperty Name="dayId" ColumnName="dayId" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="DcId" ColumnName="DcId" />
+                <ScalarProperty Name="PerId" ColumnName="PerId" />
+                <ScalarProperty Name="PdcId" ColumnName="PdcId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personals_InDirectCode">
+            <EntityTypeMapping TypeName="OTA_DBModel.Personals_InDirectCode">
+              <MappingFragment StoreEntitySet="Personals_InDirectCode">
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="DcsId" ColumnName="DcsId" />
+                <ScalarProperty Name="dayId" ColumnName="dayId" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="IdcId" ColumnName="IdcId" />
+                <ScalarProperty Name="PerId" ColumnName="PerId" />
+                <ScalarProperty Name="PidcId" ColumnName="PidcId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personals_Vacations">
+            <EntityTypeMapping TypeName="OTA_DBModel.Personals_Vacations">
+              <MappingFragment StoreEntitySet="Personals_Vacations">
+                <ScalarProperty Name="VacInfoId" ColumnName="VacInfoId" />
+                <ScalarProperty Name="PidcId" ColumnName="PidcId" />
+                <ScalarProperty Name="PersonelVacId" ColumnName="PersonelVacId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RemainVacations">
+            <EntityTypeMapping TypeName="OTA_DBModel.RemainVacations">
+              <MappingFragment StoreEntitySet="RemainVacations">
+                <ScalarProperty Name="VpNote" ColumnName="VpNote" />
+                <ScalarProperty Name="RemainVac" ColumnName="RemainVac" />
+                <ScalarProperty Name="PerId" ColumnName="PerId" />
+                <ScalarProperty Name="VacInfoId" ColumnName="VacInfoId" />
+                <ScalarProperty Name="VpId" ColumnName="VpId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="OTA_DBModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vac_Info">
+            <EntityTypeMapping TypeName="OTA_DBModel.Vac_Info">
+              <MappingFragment StoreEntitySet="Vac_Info">
+                <ScalarProperty Name="YearId" ColumnName="YearId" />
+                <ScalarProperty Name="VacNote" ColumnName="VacNote" />
+                <ScalarProperty Name="MaxTransfer" ColumnName="MaxTransfer" />
+                <ScalarProperty Name="MaxInPeriod" ColumnName="MaxInPeriod" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="MaxInYear" ColumnName="MaxInYear" />
+                <ScalarProperty Name="VacId" ColumnName="VacId" />
+                <ScalarProperty Name="VacInfoId" ColumnName="VacInfoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Year">
+            <EntityTypeMapping TypeName="OTA_DBModel.Year">
+              <MappingFragment StoreEntitySet="Year">
+                <ScalarProperty Name="YearName" ColumnName="YearName" />
+                <ScalarProperty Name="YearId" ColumnName="YearId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Per_Dep_Job">
+            <EntityTypeMapping TypeName="OTA_DBModel.Per_Dep_Job">
+              <MappingFragment StoreEntitySet="Per_Dep_Job">
+                <ScalarProperty Name="AName" ColumnName="AName" />
+                <ScalarProperty Name="JobName" ColumnName="JobName" />
+                <ScalarProperty Name="EduName" ColumnName="EduName" />
+                <ScalarProperty Name="DepName" ColumnName="DepName" />
+                <ScalarProperty Name="LastVisited" ColumnName="LastVisited" />
+                <ScalarProperty Name="PersonalsNote" ColumnName="PersonalsNote" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="EndContract" ColumnName="EndContract" />
+                <ScalarProperty Name="StartContract" ColumnName="StartContract" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="EduId" ColumnName="EduId" />
+                <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+                <ScalarProperty Name="ShSh" ColumnName="ShSh" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="AId" ColumnName="AId" />
+                <ScalarProperty Name="JobId" ColumnName="JobId" />
+                <ScalarProperty Name="DepId" ColumnName="DepId" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="PersonalID" ColumnName="PersonalID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rpt_PersonalList">
+            <EntityTypeMapping TypeName="OTA_DBModel.rpt_PersonalList">
+              <MappingFragment StoreEntitySet="rpt_PersonalList">
+                <ScalarProperty Name="AName" ColumnName="AName" />
+                <ScalarProperty Name="JobName" ColumnName="JobName" />
+                <ScalarProperty Name="EduName" ColumnName="EduName" />
+                <ScalarProperty Name="DepName" ColumnName="DepName" />
+                <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+                <ScalarProperty Name="PersonalsNote" ColumnName="PersonalsNote" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="EndCont" ColumnName="EndCont" />
+                <ScalarProperty Name="StartCont" ColumnName="StartCont" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Tavalod" ColumnName="Tavalod" />
+                <ScalarProperty Name="ShSh" ColumnName="ShSh" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="AId" ColumnName="AId" />
+                <ScalarProperty Name="JobId" ColumnName="JobId" />
+                <ScalarProperty Name="DepId" ColumnName="DepId" />
+                <ScalarProperty Name="EduId" ColumnName="EduId" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="PersonalID" ColumnName="PersonalID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Education">
+            <EntityTypeMapping TypeName="OTA_DBModel.Education">
+              <MappingFragment StoreEntitySet="Education">
+                <ScalarProperty Name="EduName" ColumnName="EduName" />
+                <ScalarProperty Name="EduId" ColumnName="EduId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personals">
+            <EntityTypeMapping TypeName="OTA_DBModel.Personals">
+              <MappingFragment StoreEntitySet="Personals">
+                <ScalarProperty Name="EduId" ColumnName="EduId" />
+                <ScalarProperty Name="LastVisited" ColumnName="LastVisited" />
+                <ScalarProperty Name="PersonalsNote" ColumnName="PersonalsNote" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="EndContract" ColumnName="EndContract" />
+                <ScalarProperty Name="StartContract" ColumnName="StartContract" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+                <ScalarProperty Name="ShSh" ColumnName="ShSh" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="AId" ColumnName="AId" />
+                <ScalarProperty Name="JobId" ColumnName="JobId" />
+                <ScalarProperty Name="DepId" ColumnName="DepId" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="PersonalID" ColumnName="PersonalID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="OTA_DBModel.Admins">
+              <MappingFragment StoreEntitySet="Admins">
+                <ScalarProperty Name="Pass" ColumnName="Pass" />
+                <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+                <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rptInDirect">
+            <EntityTypeMapping TypeName="OTA_DBModel.rptInDirect">
+              <MappingFragment StoreEntitySet="rptInDirect">
+                <ScalarProperty Name="MaxInYear" ColumnName="MaxInYear" />
+                <ScalarProperty Name="MaxTransfer" ColumnName="MaxTransfer" />
+                <ScalarProperty Name="EndContract" ColumnName="EndContract" />
+                <ScalarProperty Name="StartContract" ColumnName="StartContract" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+                <ScalarProperty Name="ShSh" ColumnName="ShSh" />
+                <ScalarProperty Name="PersonalID" ColumnName="PersonalID" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="YearName" ColumnName="YearName" />
+                <ScalarProperty Name="RemainVac" ColumnName="RemainVac" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="JobName" ColumnName="JobName" />
+                <ScalarProperty Name="EduName" ColumnName="EduName" />
+                <ScalarProperty Name="IdcName" ColumnName="IdcName" />
+                <ScalarProperty Name="IdcTypeName" ColumnName="IdcTypeName" />
+                <ScalarProperty Name="DsName" ColumnName="DsName" />
+                <ScalarProperty Name="Rooz" ColumnName="Rooz" />
+                <ScalarProperty Name="Tarikh" ColumnName="Tarikh" />
+                <ScalarProperty Name="DscName" ColumnName="DscName" />
+                <ScalarProperty Name="DepName" ColumnName="DepName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rptVacation">
+            <EntityTypeMapping TypeName="OTA_DBModel.rptVacation">
+              <MappingFragment StoreEntitySet="rptVacation">
+                <ScalarProperty Name="WorkMinTime" ColumnName="WorkMinTime" />
+                <ScalarProperty Name="WorkHourTime" ColumnName="WorkHourTime" />
+                <ScalarProperty Name="WorkTimeDateTime" ColumnName="WorkTimeDateTime" />
+                <ScalarProperty Name="charEndTime" ColumnName="charEndTime" />
+                <ScalarProperty Name="charStartTime" ColumnName="charStartTime" />
+                <ScalarProperty Name="MaxTransfer" ColumnName="MaxTransfer" />
+                <ScalarProperty Name="MaxInPeriod" ColumnName="MaxInPeriod" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="MaxInYear" ColumnName="MaxInYear" />
+                <ScalarProperty Name="RemainVac" ColumnName="RemainVac" />
+                <ScalarProperty Name="EduName" ColumnName="EduName" />
+                <ScalarProperty Name="JobName" ColumnName="JobName" />
+                <ScalarProperty Name="DepName" ColumnName="DepName" />
+                <ScalarProperty Name="DsName" ColumnName="DsName" />
+                <ScalarProperty Name="DscName" ColumnName="DscName" />
+                <ScalarProperty Name="Tarikh" ColumnName="Tarikh" />
+                <ScalarProperty Name="Rooz" ColumnName="Rooz" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="PersonalID" ColumnName="PersonalID" />
+                <ScalarProperty Name="IdcName" ColumnName="IdcName" />
+                <ScalarProperty Name="IdcTypeName" ColumnName="IdcTypeName" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_1">
+            <EntityTypeMapping TypeName="OTA_DBModel.View_1">
+              <MappingFragment StoreEntitySet="View_1">
+                <ScalarProperty Name="AName" ColumnName="AName" />
+                <ScalarProperty Name="JobName" ColumnName="JobName" />
+                <ScalarProperty Name="DepName" ColumnName="DepName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="PersonalID" ColumnName="PersonalID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rptDirect">
+            <EntityTypeMapping TypeName="OTA_DBModel.rptDirect">
+              <MappingFragment StoreEntitySet="rptDirect">
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="WorkMinTime" ColumnName="WorkMinTime" />
+                <ScalarProperty Name="WorkHourTime" ColumnName="WorkHourTime" />
+                <ScalarProperty Name="WorkTimeDateTime" ColumnName="WorkTimeDateTime" />
+                <ScalarProperty Name="DscName" ColumnName="DscName" />
+                <ScalarProperty Name="PersonalID" ColumnName="PersonalID" />
+                <ScalarProperty Name="JobName" ColumnName="JobName" />
+                <ScalarProperty Name="EduName" ColumnName="EduName" />
+                <ScalarProperty Name="YearName" ColumnName="YearName" />
+                <ScalarProperty Name="EndContract" ColumnName="EndContract" />
+                <ScalarProperty Name="StartContract" ColumnName="StartContract" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+                <ScalarProperty Name="ShSh" ColumnName="ShSh" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="DepName" ColumnName="DepName" />
+                <ScalarProperty Name="DsName" ColumnName="DsName" />
+                <ScalarProperty Name="DcName" ColumnName="DcName" />
+                <ScalarProperty Name="Rooz" ColumnName="Rooz" />
+                <ScalarProperty Name="Tarikh" ColumnName="Tarikh" />
+                <ScalarProperty Name="charEndTime" ColumnName="charEndTime" />
+                <ScalarProperty Name="charStartTime" ColumnName="charStartTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="viewTotalIndirect">
+            <EntityTypeMapping TypeName="OTA_DBModel.viewTotalIndirect">
+              <MappingFragment StoreEntitySet="viewTotalIndirect">
+                <ScalarProperty Name="DsName" ColumnName="DsName" />
+                <ScalarProperty Name="YearName" ColumnName="YearName" />
+                <ScalarProperty Name="YearId" ColumnName="YearId" />
+                <ScalarProperty Name="DepId" ColumnName="DepId" />
+                <ScalarProperty Name="DepName" ColumnName="DepName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="IdcTypeName" ColumnName="IdcTypeName" />
+                <ScalarProperty Name="IdcTypeId" ColumnName="IdcTypeId" />
+                <ScalarProperty Name="IdcId" ColumnName="IdcId" />
+                <ScalarProperty Name="Rooz" ColumnName="Rooz" />
+                <ScalarProperty Name="dayId" ColumnName="dayId" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="IdcName" ColumnName="IdcName" />
+                <ScalarProperty Name="PersonalID" ColumnName="PersonalID" />
+                <ScalarProperty Name="Tarikh" ColumnName="Tarikh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="viewremainVacs">
+            <EntityTypeMapping TypeName="OTA_DBModel.viewremainVacs">
+              <MappingFragment StoreEntitySet="viewremainVacs">
+                <ScalarProperty Name="DepId" ColumnName="DepId" />
+                <ScalarProperty Name="VacId" ColumnName="VacId" />
+                <ScalarProperty Name="VacInfoId" ColumnName="VacInfoId" />
+                <ScalarProperty Name="IdcId" ColumnName="IdcId" />
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+                <ScalarProperty Name="IdcTypeId" ColumnName="IdcTypeId" />
+                <ScalarProperty Name="YearId" ColumnName="YearId" />
+                <ScalarProperty Name="MaxTransfer" ColumnName="MaxTransfer" />
+                <ScalarProperty Name="MaxInPeriod" ColumnName="MaxInPeriod" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="MaxInYear" ColumnName="MaxInYear" />
+                <ScalarProperty Name="RemainVac" ColumnName="RemainVac" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="PersonalID" ColumnName="PersonalID" />
+                <ScalarProperty Name="IdcName" ColumnName="IdcName" />
+                <ScalarProperty Name="IdcTypeName" ColumnName="IdcTypeName" />
+                <ScalarProperty Name="YearName" ColumnName="YearName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rptInDirects">
+            <EntityTypeMapping TypeName="OTA_DBModel.rptInDirects">
+              <MappingFragment StoreEntitySet="rptInDirects">
+                <ScalarProperty Name="ActMinTime" ColumnName="ActMinTime" />
+                <ScalarProperty Name="ActHourTime" ColumnName="ActHourTime" />
+                <ScalarProperty Name="EndContract" ColumnName="EndContract" />
+                <ScalarProperty Name="StartContract" ColumnName="StartContract" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+                <ScalarProperty Name="ShSh" ColumnName="ShSh" />
+                <ScalarProperty Name="EduName" ColumnName="EduName" />
+                <ScalarProperty Name="JobName" ColumnName="JobName" />
+                <ScalarProperty Name="DepName" ColumnName="DepName" />
+                <ScalarProperty Name="Tarikh" ColumnName="Tarikh" />
+                <ScalarProperty Name="Rooz" ColumnName="Rooz" />
+                <ScalarProperty Name="DscName" ColumnName="DscName" />
+                <ScalarProperty Name="IdcName" ColumnName="IdcName" />
+                <ScalarProperty Name="IdcTypeName" ColumnName="IdcTypeName" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="charEndTime" ColumnName="charEndTime" />
+                <ScalarProperty Name="charStartTime" ColumnName="charStartTime" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="PersonalID" ColumnName="PersonalID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model" ZoomLevel="86">
+        <EntityTypeShape EntityType="OTA_DBModel.AccessLevel" Width="1.5" PointX="3.75" PointY="4.5" Height="1.595683593749996" />
+        <EntityTypeShape EntityType="OTA_DBModel.CodeState" Width="1.5" PointX="6" PointY="12" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="OTA_DBModel.DaysOfYear" Width="1.5" PointX="6" PointY="15.125" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="OTA_DBModel.DayState" Width="1.5" PointX="3.75" PointY="14.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="OTA_DBModel.DcDepJob" Width="1.5" PointX="8.25" PointY="7.375" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="OTA_DBModel.Departman_Job" Width="1.5" PointX="3" PointY="7.25" Height="2.1725878906249818" />
+        <EntityTypeShape EntityType="OTA_DBModel.Departmans" Width="1.5" PointX="0.75" PointY="7.375" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="OTA_DBModel.DirectCodes" Width="1.5" PointX="6" PointY="2.375" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="OTA_DBModel.InDirectCodes" Width="1.5" PointX="6" PointY="19.875" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="OTA_DBModel.InDirectCodesType" Width="1.5" PointX="3.75" PointY="20.125" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="OTA_DBModel.Jobs" Width="1.5" PointX="0.75" PointY="4.375" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="OTA_DBModel.Personals_DirectCode" Width="1.5" PointX="11.25" PointY="6.625" Height="3.3263964843749818" />
+        <EntityTypeShape EntityType="OTA_DBModel.Personals_InDirectCode" Width="1.5" PointX="8.25" PointY="2.625" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="OTA_DBModel.Personals_Vacations" Width="1.5" PointX="10.5" PointY="3.375" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="OTA_DBModel.RemainVacations" Width="1.5" PointX="8.25" PointY="10.125" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="OTA_DBModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="OTA_DBModel.Vac_Info" Width="1.5" PointX="8.25" PointY="13.625" Height="3.32639648437498" />
+        <EntityTypeShape EntityType="OTA_DBModel.Year" Width="1.5" PointX="3.75" PointY="17.375" Height="1.7879850260416674" />
+        <AssociationConnector Association="OTA_DBModel.FK_Personals_DirectCode_CodeState" >
+          <ConnectorPoint PointX="7.21875" PointY="12" />
+          <ConnectorPoint PointX="7.21875" PointY="7.0838932291666659" />
+          <ConnectorPoint PointX="7.276041666666667" PointY="7.083893229166665" />
+          <ConnectorPoint PointX="7.442708333333333" PointY="7.0838932291666659" />
+          <ConnectorPoint PointX="7.7423706636783569" PointY="7.083893229166665" />
+          <ConnectorPoint PointX="8.0208333333333339" PointY="7.0838932291666659" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="7.083893229166665" />
+          <ConnectorPoint PointX="8.2500000000000018" PointY="7.0838932291666659" />
+          <ConnectorPoint PointX="10.510416666666666" PointY="7.083893229166665" />
+          <ConnectorPoint PointX="10.677083333333334" PointY="7.0838932291666659" />
+          <ConnectorPoint PointX="11.25" PointY="7.0838932291666659" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_Personals_InDirectCode_CodeState" >
+          <ConnectorPoint PointX="7.5" PointY="11.751152846153847" />
+          <ConnectorPoint PointX="7.9316987048852523" PointY="5.5650146639310192" />
+          <ConnectorPoint PointX="7.9433012951147486" PointY="5.39875234806316" />
+          <ConnectorPoint PointX="8" PointY="4.5862736002604167" />
+          <ConnectorPoint PointX="8.25" PointY="4.5862736002604167" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_DaysOfYear_DayState" >
+          <ConnectorPoint PointX="5.25" PointY="15.831492513020834" />
+          <ConnectorPoint PointX="6" PointY="15.831492513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_DaysOfYear_Year1" >
+          <ConnectorPoint PointX="5.25" PointY="18.009348958333334" />
+          <ConnectorPoint PointX="6" PointY="18.009348958333334" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_Personals_DirectCode_DaysOfYear" >
+          <ConnectorPoint PointX="7.5" PointY="16.884348958333334" />
+          <ConnectorPoint PointX="7.854166666666667" PointY="16.884348958333334" />
+          <ConnectorPoint PointX="8.0208333333333339" PointY="16.884348958333334" />
+          <ConnectorPoint PointX="8.125" PointY="16.884348958333334" />
+          <ConnectorPoint PointX="8.125" PointY="13.375000000000002" />
+          <ConnectorPoint PointX="8.9166666666666661" PointY="13.375000000000002" />
+          <ConnectorPoint PointX="9.0833333333333339" PointY="13.375000000000002" />
+          <ConnectorPoint PointX="10.5" PointY="13.375000000000002" />
+          <ConnectorPoint PointX="10.5" PointY="10.624999999999998" />
+          <ConnectorPoint PointX="10.510416666666666" PointY="10.624999999999998" />
+          <ConnectorPoint PointX="10.677083333333334" PointY="10.624999999999998" />
+          <ConnectorPoint PointX="12" PointY="10.624999999999998" />
+          <ConnectorPoint PointX="12" PointY="9.9513964843749818" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_Personals_InDirectCode_DaysOfYear" >
+          <ConnectorPoint PointX="7.5" PointY="16.573392227564103" />
+          <ConnectorPoint PointX="7.9088684435135619" PointY="15.455807958184613" />
+          <ConnectorPoint PointX="7.9661315564864372" PointY="15.299287308842638" />
+          <ConnectorPoint PointX="8.0963684435135619" PointY="14.94330313216298" />
+          <ConnectorPoint PointX="8.1536315564864381" PointY="14.786782482821005" />
+          <ConnectorPoint PointX="8.1666666666666679" PointY="14.751152846153847" />
+          <ConnectorPoint PointX="8.1666666666666679" PointY="5.2712377584635348" />
+          <ConnectorPoint PointX="8.25" PointY="5.2712377584635348" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_DcDepJob_Departman_Job" >
+          <ConnectorPoint PointX="4.5" PointY="7.65625" />
+          <ConnectorPoint PointX="6.994791666666667" PointY="7.6562499999999991" />
+          <ConnectorPoint PointX="7.302083333333333" PointY="7.65625" />
+          <ConnectorPoint PointX="7.7024288341519629" PointY="7.6562499999999991" />
+          <ConnectorPoint PointX="8.0208333333333321" PointY="7.65625" />
+          <ConnectorPoint PointX="8.25" PointY="7.65625" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_DcDepJob_DirectCodes" >
+          <ConnectorPoint PointX="7.359375" PointY="4.3552864583333246" />
+          <ConnectorPoint PointX="7.359375" PointY="7.4843724999999992" />
+          <ConnectorPoint PointX="7.7144232791454712" PointY="7.4843724999999983" />
+          <ConnectorPoint PointX="8.0208333333333321" PointY="7.4843724999999992" />
+          <ConnectorPoint PointX="8.25" PointY="7.4843724999999992" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_Departman_Job_Departmans" >
+          <ConnectorPoint PointX="2.25" PointY="8.3651432291666659" />
+          <ConnectorPoint PointX="3" PointY="8.3651432291666659" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_Departman_Job_Jobs" >
+          <ConnectorPoint PointX="2.25" PointY="6.2567350260416656" />
+          <ConnectorPoint PointX="3.34375" PointY="6.2567350260416656" />
+          <ConnectorPoint PointX="3.34375" PointY="7.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_Personals_DirectCode_DirectCodes" >
+          <ConnectorPoint PointX="7.078125" PointY="4.3552864583333246" />
+          <ConnectorPoint PointX="7.078125" PointY="9.804790039062496" />
+          <ConnectorPoint PointX="7.135416666666667" PointY="9.804790039062496" />
+          <ConnectorPoint PointX="7.302083333333333" PointY="9.804790039062496" />
+          <ConnectorPoint PointX="7.5524932968368059" PointY="9.804790039062496" />
+          <ConnectorPoint PointX="7.719159963503472" PointY="9.804790039062496" />
+          <ConnectorPoint PointX="7.854166666666667" PointY="9.804790039062496" />
+          <ConnectorPoint PointX="8.0208333333333339" PointY="9.804790039062496" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="9.804790039062496" />
+          <ConnectorPoint PointX="8.2500000000000018" PointY="9.804790039062496" />
+          <ConnectorPoint PointX="10.510416666666666" PointY="9.804790039062496" />
+          <ConnectorPoint PointX="10.677083333333334" PointY="9.804790039062496" />
+          <ConnectorPoint PointX="11.25" PointY="9.804790039062496" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_InDirectCodes_InDirectCodesType" >
+          <ConnectorPoint PointX="5.25" PointY="21.018992513020834" />
+          <ConnectorPoint PointX="6" PointY="21.018992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_Personals_InDirectCode_InDirectCodes" >
+          <ConnectorPoint PointX="7.5" PointY="19.938460538461534" />
+          <ConnectorPoint PointX="7.9375" PointY="19.500960538461534" />
+          <ConnectorPoint PointX="7.9375" PointY="3.4493848001302148" />
+          <ConnectorPoint PointX="8.25" PointY="3.4493848001302148" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_Vac_Info_InDirectCodes" >
+          <ConnectorPoint PointX="7.5" PointY="21.057444661458334" />
+          <ConnectorPoint PointX="9" PointY="21.057444661458334" />
+          <ConnectorPoint PointX="9" PointY="16.951396484374982" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_Personals_Vacations_Personals_InDirectCode" >
+          <ConnectorPoint PointX="9.75" PointY="4.3651432291666623" />
+          <ConnectorPoint PointX="10.5" PointY="4.3651432291666623" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_Personals_Vacations_Vac_Info" >
+          <ConnectorPoint PointX="9.75" PointY="16.410502929687496" />
+          <ConnectorPoint PointX="10.59375" PointY="16.410502929687496" />
+          <ConnectorPoint PointX="10.59375" PointY="5.3552864583333246" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_RemainVacations_Vac_Info" >
+          <ConnectorPoint PointX="9" PointY="13.625" />
+          <ConnectorPoint PointX="9" PointY="12.489889322916667" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_Vac_Info_Year1" >
+          <ConnectorPoint PointX="5.25" PointY="18.934591471354167" />
+          <ConnectorPoint PointX="7.854166666666667" PointY="18.934591471354167" />
+          <ConnectorPoint PointX="8.0208333333333339" PointY="18.934591471354167" />
+          <ConnectorPoint PointX="8.5937475" PointY="18.934591471354167" />
+          <ConnectorPoint PointX="8.5937475" PointY="16.951396484374982" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="OTA_DBModel.Per_Dep_Job" Width="1.5" PointX="0.75" PointY="10.75" Height="5.05710937500001" />
+        <EntityTypeShape EntityType="OTA_DBModel.rpt_PersonalList" Width="1.5" PointX="10.75" PointY="10.75" Height="5.05710937500001" />
+        <EntityTypeShape EntityType="OTA_DBModel.Education" Width="1.5" PointX="10.75" PointY="0.75" Height="1.595683593749996" />
+        <EntityTypeShape EntityType="OTA_DBModel.Personals" Width="1.5" PointX="13" PointY="0.75" Height="5.634013671874996" />
+        <AssociationConnector Association="OTA_DBModel.FK_Personals_AccessLevel" >
+          <ConnectorPoint PointX="5.25" PointY="4.5" />
+          <ConnectorPoint PointX="5.625" PointY="4.125" />
+          <ConnectorPoint PointX="5.625" PointY="0.375" />
+          <ConnectorPoint PointX="12.625" PointY="0.375" />
+          <ConnectorPoint PointX="13" PointY="0.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_Personals_Departmans" >
+          <ConnectorPoint PointX="1.5" PointY="6.8552864583333317" />
+          <ConnectorPoint PointX="1.5" PointY="6.8552864583333317" />
+          <ConnectorPoint PointX="5.6807737909784" PointY="4.0535643587957733" />
+          <ConnectorPoint PointX="5.8192262090216" PointY="3.9607812476398685" />
+          <ConnectorPoint PointX="7.8125" PointY="2.625" />
+          <ConnectorPoint PointX="7.8125" PointY="2.625" />
+          <ConnectorPoint PointX="10.5" PointY="2.375" />
+          <ConnectorPoint PointX="10.5" PointY="2.595683593749996" />
+          <ConnectorPoint PointX="12.625" PointY="2.595683593749996" />
+          <ConnectorPoint PointX="12.625" PointY="3.8482588359374916" />
+          <ConnectorPoint PointX="13" PointY="3.8482588359374916" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_Personals_Education" >
+          <ConnectorPoint PointX="12.25" PointY="1.5790942968749917" />
+          <ConnectorPoint PointX="13" PointY="1.5790942968749917" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_Personals_Jobs" >
+          <ConnectorPoint PointX="2.25" PointY="5.2846155130208317" />
+          <ConnectorPoint PointX="3.5" PointY="5.2846155130208317" />
+          <ConnectorPoint PointX="3.5" PointY="4.25" />
+          <ConnectorPoint PointX="5.416666666666667" PointY="4.2499999999999991" />
+          <ConnectorPoint PointX="5.583333333333333" PointY="4.25" />
+          <ConnectorPoint PointX="5.75" PointY="4.25" />
+          <ConnectorPoint PointX="5.75" PointY="0.5" />
+          <ConnectorPoint PointX="12.666666666666666" PointY="0.49999999999999944" />
+          <ConnectorPoint PointX="12.833333333333334" PointY="0.5" />
+          <ConnectorPoint PointX="13.781252" PointY="0.5" />
+          <ConnectorPoint PointX="13.781252" PointY="0.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_Personals_DirectCode_Personals" >
+          <ConnectorPoint PointX="13" PointY="6.384013671874996" />
+          <ConnectorPoint PointX="12.75" PointY="6.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_Personals_InDirectCode_Personals" >
+          <ConnectorPoint PointX="13" PointY="5.7807421874999951" />
+          <ConnectorPoint PointX="10.677083333333334" PointY="5.7807421874999942" />
+          <ConnectorPoint PointX="10.510416666666666" PointY="5.7807421874999951" />
+          <ConnectorPoint PointX="9.75" PointY="5.7807421874999951" />
+        </AssociationConnector>
+        <AssociationConnector Association="OTA_DBModel.FK_RemainVacations_Personals" >
+          <ConnectorPoint PointX="13.781252" PointY="6.384013671874996" />
+          <ConnectorPoint PointX="13.781252" PointY="7.5" />
+          <ConnectorPoint PointX="13.125" PointY="7.75" />
+          <ConnectorPoint PointX="13.125" PointY="10.499999999999998" />
+          <ConnectorPoint PointX="12.083333333333334" PointY="10.499999999999998" />
+          <ConnectorPoint PointX="11.916666666666666" PointY="10.499999999999998" />
+          <ConnectorPoint PointX="10.677083333333334" PointY="10.499999999999998" />
+          <ConnectorPoint PointX="10.510416666666666" PointY="10.499999999999998" />
+          <ConnectorPoint PointX="10.125" PointY="10.499999999999998" />
+          <ConnectorPoint PointX="9.75" PointY="11.557444661458334" />
+          <ConnectorPoint PointX="10.125" PointY="11.557444661458334" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="OTA_DBModel.Admins" Width="1.5" PointX="5.375" PointY="8" Height="1.5956835937500102" />
+        <EntityTypeShape EntityType="OTA_DBModel.rptInDirect" Width="1.5" PointX="13.375" PointY="7.75" Height="5.4417122395833246" />
+        <EntityTypeShape EntityType="OTA_DBModel.rptVacation" Width="1.5" PointX="15.375" PointY="0.75" Height="5.63401367187501" />
+        <EntityTypeShape EntityType="OTA_DBModel.View_1" Width="1.5" PointX="15.375" PointY="7.75" Height="2.1725878906250102" />
+        <EntityTypeShape EntityType="OTA_DBModel.rptDirect" Width="1.5" PointX="15.75" PointY="11" Height="5.63401367187501" />
+        <EntityTypeShape EntityType="OTA_DBModel.viewTotalIndirect" Width="1.5" PointX="10.375" PointY="17" Height="4.2879036458333246" />
+        <EntityTypeShape EntityType="OTA_DBModel.viewremainVacs" Width="1.5" PointX="0.75" PointY="16.75" Height="4.48020507812501" />
+        <EntityTypeShape EntityType="OTA_DBModel.rptInDirects" Width="1.5" PointX="12.375" PointY="16.75" Height="5.2494108072916674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

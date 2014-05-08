@@ -1,0 +1,599 @@
+﻿h1
+{
+    font-size:13px;
+    font-weight:bold;
+    font-family:Arial;
+}
+
+.lnk
+{
+}
+
+body
+{
+    font-family: tahoma,Sans-Serif;
+    font-size: 11px;
+    direction: rtl;
+    background-color:#E8EBEF;
+   /* background-image: url("../../images/bg_center.gif");*/
+    background-repeat: repeat-x;
+    overflow: scroll;
+}
+
+/* ------------------------------- outer -------------------------- */
+#outerDiv
+{
+    margin: 0px auto;
+    height: auto;
+    width: 800px;
+    background-repeat:no-repeat;
+    background-color: White;
+}
+#subOuterDiv
+{
+        padding-right: 20px;
+    padding-left: 20px;
+}
+/* ------------------------------- End -------------------------- */
+/* ------------------------------- topSait ---------------------- */
+#headerDiv
+{
+    margin:0px auto;
+    width:800px;
+    height: 90px;
+    background-image: url("../../images/portal/Portal-Header3.gif");
+    background-repeat:no-repeat;
+    background-position:center;
+    margin-bottom:5px;
+    direction: ltr;
+}
+#headerDiv a:link
+{
+    color: Black;
+    font-size: 12px;
+    line-height: 20px;
+}
+#headerDiv a:hover
+{
+    text-decoration: none;
+    color: #0066CC;
+}
+#innerHeaderDiv a:hover
+{
+    color: Blue;
+}
+#bottomHeaderDiv
+{
+    margin: 0px auto;
+    width: 780px;
+    padding-right: 10px;
+    padding-left: 10px;
+    line-height: 20px;
+    height: 27px;
+    background-color:#009AD9;
+    color: White;
+}
+div#bottomHeaderDiv div.rightHeader
+{
+    float: right;
+    font-size: 11px;
+    font-family:Tahoma;
+    width: 150px;
+    line-height: 22px;
+}
+div#bottomHeaderDiv div.leftHeader
+{
+    float: left;
+    font-size: 12px;
+    width: 630px;
+    line-height: 22px;
+}
+div#bottomHeaderDiv div.leftHeader div#innerRight
+{
+    float: right;
+    font-size: 13px;
+    width: 530px;
+    line-height: 22px;
+    text-align: center;
+}
+div#bottomHeaderDiv div.leftHeader div#innerLeft
+{
+    float: left;
+    font-size: 11px;
+    font-family: tahoma;
+    width: 90px;
+    text-align: left;
+    direction: rtl;
+    line-height: 25px;
+}
+#bottomMenuDiv
+{
+    margin-top: 5px;
+    -moz-border-radius: 7px;
+    background-color: #D6D6D7;
+    border: 1px solid #BABAC0;
+    background-image: url("../../images/portal/header_bg.png");
+    background-repeat: repeat-x;
+    width: 760px;
+    height: 28px;
+}
+/* ------------------------------- End -------------------------- */
+/* ------------------------ content ------------------------------*/
+#contentDiv
+{
+    width: 760px;
+    height: auto;
+    background-color: red;
+    margin-top: 20px;
+    margin-bottom: 0px;
+   
+}
+#End
+{
+    
+    margin:0px auto;
+    width:800px;
+    background-color:White;
+    height:20px;
+      background-image: url("../../images/portal/botomSiate.gif");
+
+}
+/* ------------------------ RightSideBar ------------------------- */
+div#contentDiv div#contentRight
+{
+    float: right;
+    width: 175px;
+    height: auto;
+    background-color: white;
+    margin-bottom:10px;
+}
+div#contentDiv div#contentRight div#profile
+{
+    width:173px;
+    height:auto;
+    margin-top:10px;
+     font-family:tahoma;
+    font-size: 11px;
+     border: 1px solid #CCCCCC;
+      -moz-border-radius: 5px;
+    background-color:  #EEEEEE;
+}
+div#profile div#profileRight
+{
+    width:173px;
+    height:32px;
+    margin-top:5px;
+    background-image:url("../../images/btn/user.png");
+    background-position:center;
+    background-repeat:no-repeat;
+    border-bottom:1px solid #cccccc;
+}
+div#profile div#profileLeft
+{
+    direction:rtl;
+    text-align:right;
+    width:147px;
+    height:auto;
+        margin-top:7px;
+    font-family:tahoma;
+    font-size: 11px;
+    width: 158px;
+    padding: 0px 10px 1px 5px;
+    background-color: #EEEEEE;
+    line-height:20px;
+    margin-bottom:3px;
+    color: #3221BA;
+}
+div#profile div#profileLeft hr
+{
+    border:1px dotted #cccccc;
+    width: 158px;
+}
+.headerContentRight
+{
+    width: 169px;
+    height: 32px;
+    background-color: #EEEEEE;
+margin:1px;
+   border-bottom:1px solid #CCCCCC;
+}
+div.headerContentRight span#imgHeader
+{
+    float: right;
+    width: 15px;
+    height: 14px;
+    padding-top: 6px;
+    padding-right: 3px;
+}
+div.headerContentRight span#contentHeader
+{
+    float:left;
+    width: 146px;
+    line-height: 30px;
+    color: #333333;
+    font-weight:bold;
+    font-family:tahoma;
+     font-size:11px;
+     line-height:30px;
+}
+div#contentDiv div#contentRight div#contents
+{
+    border: 1px solid #CCCCCC;
+      -moz-border-radius: 5px;
+    background-color:  #EEEEEE;
+    width: 173px;
+    height: auto;
+    line-height: 11px;
+}
+div#contentDiv div#contentRight div#contents div#bottomContent
+{
+    margin-top:7px;
+    font-family:tahoma;
+    font-size: 11px;
+    width: 158px;
+    padding: 0px 10px 1px 5px;
+    height: auto;
+    background-color: #EEEEEE;
+    line-height:20px;
+    margin-bottom:3px;
+}
+div#contentDiv div#contentRight div#contents div#bottomContent a
+{
+    text-decoration: none;
+    color: #3221BA;
+}
+div#contentDiv div#contentRight div#contents div#bottomContent a:hover
+{
+    text-decoration: none;
+    color: #333333;
+}
+
+div#contentDiv div#contentRight div#contents hr
+{
+    width: 158px;
+    border: 1px dotted #CCCCCC;
+}
+/* ------------------------- End --------------------------------- */
+/* ------------------------ LeftSideBar ------------------------- */
+div#contentDiv div#contentLeft
+{
+    float: left;
+    width: 575px;
+    height: auto;
+    background-color: white;
+    margin-bottom:5px;
+}
+div#contentDiv div#contentLeft div#contentL div#contentss fieldset
+{
+    border: 1px solid #BABAC0;
+}
+div#contentDiv div#contentLeft div#contentL div#contentss fieldset legend
+{
+    margin-right: 15px;
+    color:#514f4f;
+    font-size: 12px;
+}
+
+div#contentDiv div#contentLeft div#contentL
+{
+    width: 573px;
+    height: auto;
+    background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+     -moz-border-radius: 5px;
+}
+div#contentL div#headerContentL
+{
+    margin:1px;
+    background-color:#EEEEEE;
+    width: 571px;
+    height: 32px;
+    text-align: center;
+    line-height: 20px;
+    color: #333333;
+    font-size: 11px;
+    font-family:tahoma;
+    line-height:30px;
+    font-weight:bold;
+   border-bottom:1px solid #CCCCCC;
+}
+div#contentDiv div#contentLeft div#contentL div#contentss
+{
+    margin: 10px 20px 10px 20px;
+   
+    border: 1px solid #EEEEEE;
+    width: 531px;
+    height: auto;
+}
+/* ------------------------------- End -------------------------- */
+/* ------------------------ footer -------------------------------*/
+#footerDiv
+{
+    clear: both;
+    
+    text-align: center;
+    color: #968888;
+    line-height: 30px;
+}
+#footerDiv a
+{
+    color: #968888;
+    text-decoration: none;
+}
+#footerDiv a:hover
+{
+    text-decoration: underline;
+    color: Black;
+}
+hr
+{
+    width: 800px;
+    border: 1px dotted #cccccc;
+}
+/* ------------------------------- End -------------------------- */
+.lnkMenuSideBar
+{
+    list-style-type: disc;
+}
+/* ------------------------------ Rahnama ------------------------ */
+.rahnama
+{
+    width: 531px;
+    height: auto;
+    margin-bottom:30px;
+}
+#rightRahnama
+{
+    direction: ltr;
+    float: right;
+    width: 21px;
+    height: auto;
+    line-height: 25px;
+}
+#leftRahnama
+{
+    float: left;
+    width: 510px;
+    height: auto;
+    line-height: 25px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size:11px;
+}
+#leftRahnama a:link
+{
+    text-decoration: underline;
+    color: Green;
+}
+.rahnama h1
+{
+    font-weight: bold;
+    color: Green;
+}
+/* ------------------------------- End -------------------------- */
+/* ------------------------------- table -------------------------- */
+.tbl
+{
+    margin: 20px;
+    padding: 15px 15px 15px 0px;
+    border: 1px solid #EEEEEE;
+    clear: both;
+    color:#333333;
+ line-height:12px;
+}
+.tbl table
+{
+    text-align:right;
+    
+    
+    }
+.tbl table tr
+{ 
+       
+}
+.tbl table tr td
+{
+    height: 20px;
+
+       
+}
+.tbl table tr td span
+{
+    
+}
+.tbl table tr td hr
+{
+    width: 390px;
+    border: 1px dotted #EEEEEE;
+}
+/* ------------------------------- End -------------------------- */
+/* ------------------------------- validation ------------------- */
+.validationDiv
+{
+
+    line-height: 18px;
+    text-align: justify;
+    padding-right: 10px;
+    font-family:Tahoma;
+    font-size:11px;
+    background-color:#fce66a;
+   margin:10px;
+    -moz-border-radius: 7px;
+
+}
+.validationDiv h1
+{
+    font-weight: bold;
+    color: red;
+
+    font-size:12px;
+    text-align:center;
+    margin-bottom:10px;
+   
+}
+.validationDiv ol
+{
+    list-style-type: disc;
+    list-style-position: inside;
+
+        
+}
+
+/* ------------------------------- End -------------------------- */
+/* ---------------------------- calender -------------------------- */
+.MyCalendar .ajax__calendar_container
+{
+    border: 1px solid #646464;
+    background-color: #CCCCFF;
+    color: Blue;
+}
+.MyCalendar .ajax__calendar_today
+{
+    color: red;
+    font-weight: bold;
+}
+.MyCalendar .ajax__calendar_footer
+{
+    border: 1px solid #79AEE2;
+    background-color: #79AEE2;
+    color: Black;
+    line-height:10px;
+    margin-top:1px;
+}
+.MyCalendar .ajax__calendar_header
+{
+    background-color: #79AEE2;
+    line-height: 17px;
+    color: Black;
+}
+.MyCalendar .ajax__calendar_body
+{
+    background-color: #F3F8FE;
+    color: Black;
+}
+
+.MyCalendar .ajax__calendar_hover
+{
+    background-color: #79AEE2;
+    color: White;
+}
+.imageStyle
+{
+    margin-top: 3px;
+    float: right;
+    cursor: pointer;
+}
+/* ------------------------------- End -------------------------- */
+/* ------------------------------- grid -------------------------- */
+.grid
+{
+   margin-top:4px;
+   margin-bottom:4px;
+   margin-right:19px;
+   margin-left:19px;
+   color:#333333;
+}
+.grid div.a
+{
+  -moz-border-radius:5px;
+  border:1px solid red;
+    
+}
+.grid table tr th
+{
+ padding-bottom:10px;
+ padding-top:5px;
+}
+.grid table tr th
+{
+      /*  border:1px solid #808080;*/
+}
+.grid table tr td
+{
+
+line-height:20px;
+padding-bottom:3px;
+ padding-top:3px;
+}
+div.grid div.footerGrid
+{
+    background-color:#009AD9;color:#FFFFFF;padding-top:7px;padding-bottom:7px;
+    text-align:right;
+     border-bottom:1px solid #009AD9;
+border-right:1px solid #009AD9;
+border-left:1px solid #009AD9;
+    font-size:8px;
+    font-weight:bold;
+}
+.divch
+{
+    float:left; margin-left:5px; font-size:11px;
+}
+.divkh
+{
+    float:left; margin-left:5px; font-size:11px;
+}
+.footerGrid div.divkh a:link
+{
+    color:red;
+    text-decoration:underline;
+}
+.footerGrid div.divkh a:hover
+{
+    color:Blue;
+    text-decoration:blink;
+}
+.footerGrid .divch a:link
+{
+    color:red;
+    text-decoration:blink;
+}
+.footerGrid .divch a:hover
+{
+    color:blue;
+     text-decoration:underline;
+}
+.lblFooter
+{
+    margin-right:5px;
+}
+div.grid div.headerGrid
+{
+    padding-top:5px;
+    text-align:center;
+   padding-bottom:9px;
+   color:#6557C5;
+   font-size:11px;
+   font-weight:bold;
+  
+}
+
+div.grid div.data
+{
+    
+}
+.data table
+{
+    margin-bottom:20px;
+    margin-top:25px;
+    margin-right:auto;
+    margin-left:auto;
+}
+.data table tr td
+{
+        border-bottom:1px solid #EEEEEE;
+border-right:1px solid #EEEEEE;
+border-left:1px solid #EEEEEE;
+line-height:20px;
+
+ text-align:right;
+}
+.data table tr td hr
+{
+    border:1px dotted #514F4F;
+    color:#514F4F;
+    height:1px;
+    width:450px;
+    text-align:center;
+}
+/* ------------------------------- End -------------------------- */
